@@ -51,7 +51,9 @@
 		EDB552E22E2259370001B905 /* Eventorias2 */ = {
 			isa = PBXGroup;
 			children = (
-				EDB552E32E2259370001B905 /* Eventorias2App.swift */,
+				EDB552F72E22814B0001B905 /* Sources */,
+				EDB552F32E227E110001B905 /* Tests */,
+				EDB552F42E227E180001B905 /* Ressources */,
 				EDB552E52E2259370001B905 /* ContentView.swift */,
 				EDB552E72E22593A0001B905 /* Assets.xcassets */,
 				EDB552E92E22593A0001B905 /* Preview Content */,
@@ -65,6 +67,308 @@
 				EDB552EA2E22593A0001B905 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDB552F12E227DF90001B905 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EDB552E32E2259370001B905 /* Eventorias2App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EDB552F32E227E110001B905 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		EDB552F42E227E180001B905 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		EDB552F52E227E210001B905 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EDB552FA2E22820D0001B905 /* Authentication */,
+				EDB552FD2E22823D0001B905 /* Events */,
+				EDB552FC2E2282320001B905 /* Notifications */,
+				EDB552FB2E2282230001B905 /* Sharing */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EDB552F62E227E2E0001B905 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EDB553122E2284080001B905 /* Models */,
+				EDB553112E2284030001B905 /* Services */,
+				EDB553102E2283F30001B905 /* Extensions */,
+				EDB5530F2E2283E70001B905 /* Utilities */,
+				EDB5530E2E2283E20001B905 /* Constants */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EDB552F72E22814B0001B905 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EDB552F12E227DF90001B905 /* App */,
+				EDB552F52E227E210001B905 /* Features */,
+				EDB552F62E227E2E0001B905 /* Core */,
+				EDB552F82E22815F0001B905 /* Navigation */,
+				EDB552F92E2281650001B905 /* UI */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EDB552F82E22815F0001B905 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EDB553142E2284760001B905 /* Coordinators */,
+				EDB553132E2284690001B905 /* NavigationModels */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EDB552F92E2281650001B905 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EDB553172E2284A20001B905 /* Components */,
+				EDB553162E22849B0001B905 /* Themes */,
+				EDB553152E2284850001B905 /* Accessibility */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EDB552FA2E22820D0001B905 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EDB552FE2E22825E0001B905 /* Models */,
+				EDB553002E2282A70001B905 /* Views */,
+				EDB552FF2E2282730001B905 /* ViewModels */,
+				EDB553012E2282B10001B905 /* Services */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EDB552FB2E2282230001B905 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				EDB5530D2E2283780001B905 /* Models */,
+				EDB5530C2E2283740001B905 /* Views */,
+				EDB5530B2E22836D0001B905 /* ViewModels */,
+				EDB5530A2E2283670001B905 /* Services */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		EDB552FC2E2282320001B905 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				EDB553092E2283550001B905 /* Models */,
+				EDB553082E2283510001B905 /* Views */,
+				EDB553072E2283490001B905 /* ViewModels */,
+				EDB553062E2283440001B905 /* Services */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		EDB552FD2E22823D0001B905 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				EDB553052E2283390001B905 /* Models */,
+				EDB553042E2283340001B905 /* Views */,
+				EDB553032E22832B0001B905 /* ViewModel */,
+				EDB553022E2283230001B905 /* Services */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		EDB552FE2E22825E0001B905 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDB552FF2E2282730001B905 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EDB553002E2282A70001B905 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDB553012E2282B10001B905 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDB553022E2283230001B905 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDB553032E22832B0001B905 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EDB553042E2283340001B905 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDB553052E2283390001B905 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDB553062E2283440001B905 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDB553072E2283490001B905 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EDB553082E2283510001B905 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDB553092E2283550001B905 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDB5530A2E2283670001B905 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDB5530B2E22836D0001B905 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EDB5530C2E2283740001B905 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDB5530D2E2283780001B905 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDB5530E2E2283E20001B905 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EDB5530F2E2283E70001B905 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EDB553102E2283F30001B905 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDB553112E2284030001B905 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDB553122E2284080001B905 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDB553132E2284690001B905 /* NavigationModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationModels;
+			sourceTree = "<group>";
+		};
+		EDB553142E2284760001B905 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		EDB553152E2284850001B905 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
+		EDB553162E22849B0001B905 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		EDB553172E2284A20001B905 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
