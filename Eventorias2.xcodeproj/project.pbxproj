@@ -18,6 +18,10 @@
 		EDB553222E228CAA0001B905 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = EDB553212E228CAA0001B905 /* FirebaseAnalyticsIdentitySupport */; };
 		EDB553242E228CAA0001B905 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = EDB553232E228CAA0001B905 /* FirebaseAnalyticsOnDeviceConversion */; };
 		EDB553262E2296740001B905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553252E2296740001B905 /* AppDelegate.swift */; };
+		EDB553282E2299750001B905 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553272E2299750001B905 /* User.swift */; };
+		EDB5532B2E229AC10001B905 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EDB5532A2E229AC10001B905 /* FirebaseAuth */; };
+		EDB5532D2E229AC10001B905 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EDB5532C2E229AC10001B905 /* FirebaseCore */; };
+		EDB5532F2E229AC10001B905 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EDB5532E2E229AC10001B905 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,7 @@
 		EDB552EA2E22593A0001B905 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB553182E22891A0001B905 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDB553252E2296740001B905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDB553272E2299750001B905 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +41,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB553222E228CAA0001B905 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
+				EDB5532B2E229AC10001B905 /* FirebaseAuth in Frameworks */,
 				EDB5531E2E228CAA0001B905 /* FirebaseAnalytics in Frameworks */,
 				EDB553242E228CAA0001B905 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				EDB5532D2E229AC10001B905 /* FirebaseCore in Frameworks */,
+				EDB5532F2E229AC10001B905 /* FirebaseFirestore in Frameworks */,
 				EDB553202E228CAA0001B905 /* FirebaseAnalyticsCore in Frameworks */,
 				EDB5531C2E228CAA0001B905 /* FirebaseAI in Frameworks */,
 			);
@@ -51,6 +59,7 @@
 			children = (
 				EDB552E22E2259370001B905 /* Eventorias2 */,
 				EDB552E12E2259370001B905 /* Products */,
+				EDB553292E229AC10001B905 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +217,7 @@
 		EDB552FE2E22825E0001B905 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EDB553272E2299750001B905 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +397,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		EDB553292E229AC10001B905 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,6 +426,9 @@
 				EDB5531F2E228CAA0001B905 /* FirebaseAnalyticsCore */,
 				EDB553212E228CAA0001B905 /* FirebaseAnalyticsIdentitySupport */,
 				EDB553232E228CAA0001B905 /* FirebaseAnalyticsOnDeviceConversion */,
+				EDB5532A2E229AC10001B905 /* FirebaseAuth */,
+				EDB5532C2E229AC10001B905 /* FirebaseCore */,
+				EDB5532E2E229AC10001B905 /* FirebaseFirestore */,
 			);
 			productName = Eventorias2;
 			productReference = EDB552E02E2259370001B905 /* Eventorias2.app */;
@@ -468,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB553282E2299750001B905 /* User.swift in Sources */,
 				EDB553262E2296740001B905 /* AppDelegate.swift in Sources */,
 				EDB552E62E2259370001B905 /* ContentView.swift in Sources */,
 				EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */,
@@ -690,8 +711,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.15.0;
+				kind = exactVersion;
+				version = 11.10.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -721,6 +742,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EDB5531A2E228CAA0001B905 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		EDB5532A2E229AC10001B905 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB5531A2E228CAA0001B905 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EDB5532C2E229AC10001B905 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB5531A2E228CAA0001B905 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		EDB5532E2E229AC10001B905 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB5531A2E228CAA0001B905 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
