@@ -51,7 +51,7 @@ struct SignUpView: View {
             }
             .accessibilityLabel("Sélecteur de photo de profil")
             .accessibilityHint("Appuyez pour choisir une photo depuis votre bibliothèque")
-            .onChange(of: selectedPhoto) { newItem in
+            .onChange(of: selectedPhoto) { newItem, _ in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
                         viewModel.profilePictureData = data

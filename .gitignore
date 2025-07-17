@@ -5,3 +5,4 @@
 /DerivedData/
 *.xcconfig
 Pods/
+GoogleService-Info.plist
