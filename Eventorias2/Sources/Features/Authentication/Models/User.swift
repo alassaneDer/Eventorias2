@@ -5,6 +5,7 @@
 //  Created by Alassane Der on 12/07/2025.
 //
 
+import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 
@@ -12,7 +13,7 @@ struct AuthUser: Equatable, Codable, Identifiable {
     @DocumentID var id: String?
     let email: String
     let username: String?
-    let profilePictureUrl: String
+    var profilePictureUrl: String
     let createdAt: Date
     
     init(user: FirebaseAuth.User, username: String? = nil, profilePictureUrl: String = "") {
@@ -31,3 +32,11 @@ struct AuthUser: Equatable, Codable, Identifiable {
         case createdAt = "created_at"
     }
 }
+
+/// User without profile pic
+// test3@mail.com
+/// Test123
+
+/// User withprofile pic
+// test4@mail.com
+/// Test123

@@ -9,7 +9,6 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-@MainActor
 final class AuthService: AuthServiceProtocol {
     private let auth: Auth
     private let firestore: Firestore
@@ -18,7 +17,7 @@ final class AuthService: AuthServiceProtocol {
     init(auth: Auth = .auth(), firestore: Firestore = .firestore(), userProfileService: UserProfileServiceProtocol? = nil) {
         self.auth = auth
         self.firestore = firestore
-        self.userProfileService = userProfileService ?? UserProfileService(firestore: firestore)
+        self.userProfileService = userProfileService ?? UserProfileService()
     }
     
     var currentUser: AuthUser? {

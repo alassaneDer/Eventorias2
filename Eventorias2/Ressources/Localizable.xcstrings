@@ -1,0 +1,159 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Adresse email" : {
+
+    },
+    "Aller à l'inscription" : {
+
+    },
+    "Aller à la connexion" : {
+
+    },
+    "Aperçu de la photo de profil" : {
+
+    },
+    "Appuyez pour choisir une photo depuis votre bibliothèque" : {
+
+    },
+    "Appuyez pour créer un compte" : {
+
+    },
+    "Appuyez pour créer un nouveau compte" : {
+
+    },
+    "Appuyez pour vous connecter" : {
+
+    },
+    "Appuyez pour vous connecter à un compte existant" : {
+
+    },
+    "auth_error_email_in_use" : {
+      "comment" : "Email already in use"
+    },
+    "auth_error_firestore_write_failed" : {
+      "comment" : "Failed to write to data base"
+    },
+    "auth_error_invalid_credentials" : {
+      "comment" : "Invalid email or password"
+    },
+    "auth_error_invalid_email" : {
+      "comment" : "The email adress is invalid"
+    },
+    "auth_error_invalid_form" : {
+      "comment" : "Invalid form input"
+    },
+    "auth_error_invalid_image_data" : {
+      "comment" : "Invalid image data"
+    },
+    "auth_error_invalid_userId" : {
+      "comment" : "Invalid user ID"
+    },
+    "auth_error_network" : {
+      "comment" : "Network error, please try againt."
+    },
+    "auth_error_sign_out" : {
+      "comment" : "Log out error : (error.localizedDescription)"
+    },
+    "auth_error_unexpected" : {
+      "comment" : "An unexpected error occurred: (error.localizedDescription)"
+    },
+    "auth_error_unspected" : {
+      "comment" : "An unexpected error occured : (error.localizedDescription)"
+    },
+    "auth_error_user_not_found" : {
+      "comment" : "User not found\n   User profile not found"
+    },
+    "auth_error_weak_password" : {
+      "comment" : "The password is too weak"
+    },
+    "Bienvenue sur Eventorias" : {
+
+    },
+    "Bouton d'inscription" : {
+
+    },
+    "Bouton de connexion" : {
+
+    },
+    "Changer la photo de profil" : {
+
+    },
+    "Choisir une photo de profil" : {
+
+    },
+    "Confirmation du mot de passe" : {
+
+    },
+    "Confirmer le mot de passe" : {
+
+    },
+    "Connexion" : {
+
+    },
+    "Connexion à Eventorias" : {
+
+    },
+    "Déconnexion" : {
+
+    },
+    "Déjà un compte ? Connectez-vous" : {
+
+    },
+    "Description de l'application" : {
+
+    },
+    "Écran d'accueil d'Eventorias" : {
+
+    },
+    "Email" : {
+
+    },
+    "Erreur : %@" : {
+
+    },
+    "Événement : %@" : {
+
+    },
+    "Événements" : {
+
+    },
+    "Eventorias" : {
+
+    },
+    "Inscription" : {
+
+    },
+    "Inscription à Eventorias" : {
+
+    },
+    "Mot de passe" : {
+
+    },
+    "Nom d'utilisateur" : {
+
+    },
+    "Nom d'utilisateur (optionnel)" : {
+
+    },
+    "Organisez et découvrez des événements incroyables !" : {
+
+    },
+    "Pas de compte ? Inscrivez-vous" : {
+
+    },
+    "S'inscrire" : {
+
+    },
+    "Se connecter" : {
+
+    },
+    "Se déconnecter" : {
+
+    },
+    "Sélecteur de photo de profil" : {
+
+    }
+  },
+  "version" : "1.0"
+}

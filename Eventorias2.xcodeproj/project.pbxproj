@@ -9,11 +9,25 @@
 /* Begin PBXBuildFile section */
 		ED45DE382E256F2500ED55E6 /* AuthErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45DE372E256F2500ED55E6 /* AuthErrors.swift */; };
 		ED5170D42E26B5B100E697CD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ED5170D32E26B5B100E697CD /* FirebaseStorage */; };
+		ED5170D92E26BD2600E697CD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170D82E26BD2600E697CD /* SignUpViewModel.swift */; };
+		ED5170DC2E26BD8F00E697CD /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170DB2E26BD8F00E697CD /* String+Validation.swift */; };
+		ED5170DE2E26BDE000E697CD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170DD2E26BDE000E697CD /* Color+Extension.swift */; };
+		ED5170E02E26D43000E697CD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170DF2E26D43000E697CD /* SignUpView.swift */; };
+		ED5170E22E26DAA500E697CD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ED5170E12E26DAA500E697CD /* Localizable.xcstrings */; };
+		ED5170E52E26DB3B00E697CD /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170E42E26DB3B00E697CD /* SessionManager.swift */; };
+		ED5170E72E26E24D00E697CD /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170E62E26E24D00E697CD /* NavigationCoordinator.swift */; };
+		ED5170E92E26E58B00E697CD /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170E82E26E58B00E697CD /* Route.swift */; };
+		ED5170EB2E26EC3200E697CD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170EA2E26EC3200E697CD /* RootView.swift */; };
+		ED5170ED2E26F07D00E697CD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170EC2E26F07D00E697CD /* SignInViewModel.swift */; };
+		ED5170EF2E26F10400E697CD /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170EE2E26F10400E697CD /* EventListView.swift */; };
+		ED5170F12E26F11F00E697CD /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170F02E26F11F00E697CD /* EventListViewModel.swift */; };
+		ED5170F32E26F1B700E697CD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170F22E26F1B700E697CD /* SignInView.swift */; };
+		ED86673C2E280DFB00D2CFFE /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86673B2E280DFB00D2CFFE /* DependencyContainer.swift */; };
+		ED86673E2E298D9300D2CFFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED86673D2E298D9300D2CFFE /* GoogleService-Info.plist */; };
 		EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E32E2259370001B905 /* Eventorias2App.swift */; };
-		EDB552E62E2259370001B905 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E52E2259370001B905 /* ContentView.swift */; };
+		EDB552E62E2259370001B905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E52E2259370001B905 /* MainView.swift */; };
 		EDB552E82E22593A0001B905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB552E72E22593A0001B905 /* Assets.xcassets */; };
 		EDB552EB2E22593A0001B905 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB552EA2E22593A0001B905 /* Preview Assets.xcassets */; };
-		EDB553192E22891A0001B905 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDB553182E22891A0001B905 /* GoogleService-Info.plist */; };
 		EDB553262E2296740001B905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553252E2296740001B905 /* AppDelegate.swift */; };
 		EDB553282E2299750001B905 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553272E2299750001B905 /* User.swift */; };
 		EDB5532B2E229AC10001B905 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EDB5532A2E229AC10001B905 /* FirebaseAuth */; };
@@ -26,12 +40,26 @@
 
 /* Begin PBXFileReference section */
 		ED45DE372E256F2500ED55E6 /* AuthErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrors.swift; sourceTree = "<group>"; };
+		ED5170D82E26BD2600E697CD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		ED5170DB2E26BD8F00E697CD /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		ED5170DD2E26BDE000E697CD /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		ED5170DF2E26D43000E697CD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		ED5170E12E26DAA500E697CD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		ED5170E42E26DB3B00E697CD /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		ED5170E62E26E24D00E697CD /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		ED5170E82E26E58B00E697CD /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		ED5170EA2E26EC3200E697CD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		ED5170EC2E26F07D00E697CD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		ED5170EE2E26F10400E697CD /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		ED5170F02E26F11F00E697CD /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		ED5170F22E26F1B700E697CD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		ED86673B2E280DFB00D2CFFE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		ED86673D2E298D9300D2CFFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDB552E02E2259370001B905 /* Eventorias2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB552E32E2259370001B905 /* Eventorias2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2App.swift; sourceTree = "<group>"; };
-		EDB552E52E2259370001B905 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDB552E52E2259370001B905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EDB552E72E22593A0001B905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDB552EA2E22593A0001B905 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EDB553182E22891A0001B905 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDB553252E2296740001B905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB553272E2299750001B905 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EDB553302E22DF340001B905 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
@@ -62,6 +90,30 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		ED5170DA2E26BD6900E697CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED5170DB2E26BD8F00E697CD /* String+Validation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED5170E32E26DB2900E697CD /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				ED5170E42E26DB3B00E697CD /* SessionManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		ED8667392E280DAD00D2CFFE /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				ED86673B2E280DFB00D2CFFE /* DependencyContainer.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
 		EDB552D72E2259370001B905 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +137,6 @@
 				EDB552F72E22814B0001B905 /* Sources */,
 				EDB552F32E227E110001B905 /* Tests */,
 				EDB552F42E227E180001B905 /* Ressources */,
-				EDB552E52E2259370001B905 /* ContentView.swift */,
 				EDB552E72E22593A0001B905 /* Assets.xcassets */,
 				EDB552E92E22593A0001B905 /* Preview Content */,
 			);
@@ -119,7 +170,8 @@
 		EDB552F42E227E180001B905 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				EDB553182E22891A0001B905 /* GoogleService-Info.plist */,
+				ED86673D2E298D9300D2CFFE /* GoogleService-Info.plist */,
+				ED5170E12E26DAA500E697CD /* Localizable.xcstrings */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -151,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				EDB552F12E227DF90001B905 /* App */,
+				ED8667392E280DAD00D2CFFE /* DependencyContainer */,
 				EDB552F52E227E210001B905 /* Features */,
 				EDB552F62E227E2E0001B905 /* Core */,
 				EDB552F82E22815F0001B905 /* Navigation */,
@@ -164,6 +217,7 @@
 			children = (
 				EDB553142E2284760001B905 /* Coordinators */,
 				EDB553132E2284690001B905 /* NavigationModels */,
+				ED5170EA2E26EC3200E697CD /* RootView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -181,6 +235,7 @@
 		EDB552FA2E22820D0001B905 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170DA2E26BD6900E697CD /* Extensions */,
 				ED5170D72E26B73000E697CD /* Utilities */,
 				EDB552FE2E22825E0001B905 /* Models */,
 				EDB553002E2282A70001B905 /* Views */,
@@ -234,6 +289,8 @@
 		EDB552FF2E2282730001B905 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170D82E26BD2600E697CD /* SignUpViewModel.swift */,
+				ED5170EC2E26F07D00E697CD /* SignInViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -241,6 +298,9 @@
 		EDB553002E2282A70001B905 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170DF2E26D43000E697CD /* SignUpView.swift */,
+				ED5170F22E26F1B700E697CD /* SignInView.swift */,
+				EDB552E52E2259370001B905 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,10 +308,11 @@
 		EDB553012E2282B10001B905 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EDB553302E22DF340001B905 /* AuthServiceProtocol.swift */,
-				EDB553322E22E1B70001B905 /* UserProfileServiceProtocol.swift */,
 				EDB553342E22E3BD0001B905 /* AuthService.swift */,
+				EDB553302E22DF340001B905 /* AuthServiceProtocol.swift */,
 				EDB553362E22F7FC0001B905 /* UserProfileService.swift */,
+				EDB553322E22E1B70001B905 /* UserProfileServiceProtocol.swift */,
+				ED5170E32E26DB2900E697CD /* Session */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,6 +327,7 @@
 		EDB553032E22832B0001B905 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170F02E26F11F00E697CD /* EventListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -273,6 +335,7 @@
 		EDB553042E2283340001B905 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170EE2E26F10400E697CD /* EventListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +420,7 @@
 		EDB553102E2283F30001B905 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170DD2E26BDE000E697CD /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +442,7 @@
 		EDB553132E2284690001B905 /* NavigationModels */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170E82E26E58B00E697CD /* Route.swift */,
 			);
 			path = NavigationModels;
 			sourceTree = "<group>";
@@ -385,6 +450,7 @@
 		EDB553142E2284760001B905 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				ED5170E62E26E24D00E697CD /* NavigationCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -484,7 +550,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB552EB2E22593A0001B905 /* Preview Assets.xcassets in Resources */,
-				EDB553192E22891A0001B905 /* GoogleService-Info.plist in Resources */,
+				ED86673E2E298D9300D2CFFE /* GoogleService-Info.plist in Resources */,
+				ED5170E22E26DAA500E697CD /* Localizable.xcstrings in Resources */,
 				EDB552E82E22593A0001B905 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,12 +565,25 @@
 			files = (
 				EDB553282E2299750001B905 /* User.swift in Sources */,
 				EDB553262E2296740001B905 /* AppDelegate.swift in Sources */,
+				ED5170D92E26BD2600E697CD /* SignUpViewModel.swift in Sources */,
+				ED5170EB2E26EC3200E697CD /* RootView.swift in Sources */,
+				ED5170DC2E26BD8F00E697CD /* String+Validation.swift in Sources */,
 				EDB553332E22E1B70001B905 /* UserProfileServiceProtocol.swift in Sources */,
-				EDB552E62E2259370001B905 /* ContentView.swift in Sources */,
+				EDB552E62E2259370001B905 /* MainView.swift in Sources */,
+				ED5170E52E26DB3B00E697CD /* SessionManager.swift in Sources */,
+				ED5170EF2E26F10400E697CD /* EventListView.swift in Sources */,
 				EDB553372E22F7FC0001B905 /* UserProfileService.swift in Sources */,
+				ED5170DE2E26BDE000E697CD /* Color+Extension.swift in Sources */,
+				ED5170E02E26D43000E697CD /* SignUpView.swift in Sources */,
 				EDB553312E22DF340001B905 /* AuthServiceProtocol.swift in Sources */,
+				ED5170E92E26E58B00E697CD /* Route.swift in Sources */,
 				EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */,
+				ED5170F32E26F1B700E697CD /* SignInView.swift in Sources */,
+				ED86673C2E280DFB00D2CFFE /* DependencyContainer.swift in Sources */,
+				ED5170ED2E26F07D00E697CD /* SignInViewModel.swift in Sources */,
 				ED45DE382E256F2500ED55E6 /* AuthErrors.swift in Sources */,
+				ED5170F12E26F11F00E697CD /* EventListViewModel.swift in Sources */,
+				ED5170E72E26E24D00E697CD /* NavigationCoordinator.swift in Sources */,
 				EDB553352E22E3BD0001B905 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

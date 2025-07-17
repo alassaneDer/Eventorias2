@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 protocol AuthServiceProtocol {
     var currentUser: AuthUser? { get }
     func signIn(email: String, password: String) async throws -> AuthUser

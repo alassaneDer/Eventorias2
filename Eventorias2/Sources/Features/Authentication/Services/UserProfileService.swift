@@ -5,17 +5,14 @@
 //  Created by Alassane Der on 12/07/2025.
 //
 
-import Foundation
+/*
 import FirebaseFirestore
 import FirebaseStorage
-import UIKit
 
-@MainActor
 class UserProfileService: UserProfileServiceProtocol {
-    
     private let firestore: Firestore
     private let storage: Storage
-    private let usersDocumentName: String = "users"
+    private let usersDocumentName = "users"
     
     init(firestore: Firestore = .firestore(), storage: Storage = .storage()) {
         self.firestore = firestore
@@ -39,33 +36,23 @@ class UserProfileService: UserProfileServiceProtocol {
         }
         do {
             let document = try await firestore.collection(usersDocumentName).document(id).getDocument()
-            
             if !document.exists {
                 throw AuthErrors.userProfile(.userNotFound)
             }
-            
             let user = try document.data(as: AuthUser.self)
             return user
         } catch {
-            // Si l'erreur est déjà un AuthErrors, on la relance
             if let authError = error as? AuthErrors {
                 throw authError
             }
-            // Sinon, on encapsule l'erreur dans Common.unexpected
             throw AuthErrors.common(.unexpected(error))
         }
     }
     
-    
-    
-    func uploadProfilePicture(_ image: UIImage, forUserId: String) async throws -> String {
+    func uploadProfilePicture(_ imageData: Data, forUserId: String) async throws -> String {
         guard !forUserId.isEmpty else {
             throw AuthErrors.userProfile(.invalidUserId)
         }
-        guard let imageData = image.jpegData(compressionQuality: 0.8) else {
-            throw AuthErrors.userProfile(.invalidImageData)
-        }
-        
         do {
             let storageRef = storage.reference().child("profile_pictures/\(forUserId).jpg")
             let _ = try await storageRef.putDataAsync(imageData)
@@ -80,6 +67,42 @@ class UserProfileService: UserProfileServiceProtocol {
             }
         }
     }
+}
+*/
+
+
+import FirebaseFirestore
+import FirebaseStorage
+import Foundation
+
+class UserProfileService: UserProfileServiceProtocol {
+    private let db = Firestore.firestore()
+    private let storage = Storage.storage().reference()
     
+    func fetchUser(id: String) async throws -> AuthUser {
+        do {
+            let document = try await db.collection("users").document(id).getDocument()
+            if document.exists {
+                return try document.data(as: AuthUser.self)
+            } else {
+                throw AuthErrors.SignIn.userNotFound
+            }
+        } catch {
+            throw AuthErrors.SignIn.userNotFound
+        }
+    }
     
+    func createUser(_ user: AuthUser) async throws {
+        try db.collection("users").document(user.id ?? UUID().uuidString).setData(from: user)
+    }
+    
+    func uploadProfilePicture(_ data: Data, forUserId: String) async throws -> String {
+        let storageRef = storage.child("profilePictures/\(forUserId)/profile.jpg")
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        
+        _ = try await storageRef.putDataAsync(data, metadata: metadata)
+        let downloadURL = try await storageRef.downloadURL()
+        return downloadURL.absoluteString
+    }
 }
