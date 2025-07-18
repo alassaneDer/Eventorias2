@@ -33,6 +33,7 @@
 		ED8667502E2A727200D2CFFE /* AuthButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86674F2E2A727200D2CFFE /* AuthButtonLabel.swift */; };
 		ED8667522E2A72BB00D2CFFE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667512E2A72BB00D2CFFE /* SignInView.swift */; };
 		ED8667542E2A776700D2CFFE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667532E2A776700D2CFFE /* SignUpView.swift */; };
+		ED8667562E2A8FBE00D2CFFE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667552E2A8FBE00D2CFFE /* Event.swift */; };
 		EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E32E2259370001B905 /* Eventorias2App.swift */; };
 		EDB552E62E2259370001B905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E52E2259370001B905 /* MainView.swift */; };
 		EDB552E82E22593A0001B905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB552E72E22593A0001B905 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		ED86674F2E2A727200D2CFFE /* AuthButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonLabel.swift; sourceTree = "<group>"; };
 		ED8667512E2A72BB00D2CFFE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		ED8667532E2A776700D2CFFE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		ED8667552E2A8FBE00D2CFFE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		EDB552E02E2259370001B905 /* Eventorias2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB552E32E2259370001B905 /* Eventorias2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2App.swift; sourceTree = "<group>"; };
 		EDB552E52E2259370001B905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		EDB553052E2283390001B905 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED8667552E2A8FBE00D2CFFE /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				EDB553282E2299750001B905 /* User.swift in Sources */,
 				EDB553262E2296740001B905 /* AppDelegate.swift in Sources */,
 				ED5170D92E26BD2600E697CD /* SignUpViewModel.swift in Sources */,
+				ED8667562E2A8FBE00D2CFFE /* Event.swift in Sources */,
 				ED5170EB2E26EC3200E697CD /* RootView.swift in Sources */,
 				ED5170DC2E26BD8F00E697CD /* String+Validation.swift in Sources */,
 				EDB553332E22E1B70001B905 /* UserProfileServiceProtocol.swift in Sources */,
