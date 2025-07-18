@@ -34,6 +34,9 @@
 		ED8667522E2A72BB00D2CFFE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667512E2A72BB00D2CFFE /* SignInView.swift */; };
 		ED8667542E2A776700D2CFFE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667532E2A776700D2CFFE /* SignUpView.swift */; };
 		ED8667562E2A8FBE00D2CFFE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667552E2A8FBE00D2CFFE /* Event.swift */; };
+		ED8667582E2A905E00D2CFFE /* EventServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667572E2A905E00D2CFFE /* EventServiceProtocol.swift */; };
+		ED86675A2E2A90F700D2CFFE /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667592E2A90F700D2CFFE /* EventService.swift */; };
+		ED86675D2E2A920800D2CFFE /* EventErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86675C2E2A920800D2CFFE /* EventErrors.swift */; };
 		EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E32E2259370001B905 /* Eventorias2App.swift */; };
 		EDB552E62E2259370001B905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E52E2259370001B905 /* MainView.swift */; };
 		EDB552E82E22593A0001B905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB552E72E22593A0001B905 /* Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		ED8667512E2A72BB00D2CFFE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		ED8667532E2A776700D2CFFE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		ED8667552E2A8FBE00D2CFFE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		ED8667572E2A905E00D2CFFE /* EventServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceProtocol.swift; sourceTree = "<group>"; };
+		ED8667592E2A90F700D2CFFE /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		ED86675C2E2A920800D2CFFE /* EventErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventErrors.swift; sourceTree = "<group>"; };
 		EDB552E02E2259370001B905 /* Eventorias2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB552E32E2259370001B905 /* Eventorias2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2App.swift; sourceTree = "<group>"; };
 		EDB552E52E2259370001B905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -169,6 +175,14 @@
 				ED86674F2E2A727200D2CFFE /* AuthButtonLabel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		ED86675B2E2A91F100D2CFFE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ED86675C2E2A920800D2CFFE /* EventErrors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		EDB552D72E2259370001B905 = {
@@ -329,6 +343,7 @@
 		EDB552FD2E22823D0001B905 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				ED86675B2E2A91F100D2CFFE /* Utilities */,
 				EDB553052E2283390001B905 /* Models */,
 				EDB553042E2283340001B905 /* Views */,
 				EDB553032E22832B0001B905 /* ViewModel */,
@@ -381,6 +396,8 @@
 		EDB553022E2283230001B905 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				ED8667572E2A905E00D2CFFE /* EventServiceProtocol.swift */,
+				ED8667592E2A90F700D2CFFE /* EventService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -627,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED86675A2E2A90F700D2CFFE /* EventService.swift in Sources */,
 				ED86674E2E2A722F00D2CFFE /* BottomAuthPrompt.swift in Sources */,
 				EDB553282E2299750001B905 /* User.swift in Sources */,
 				EDB553262E2296740001B905 /* AppDelegate.swift in Sources */,
@@ -638,6 +656,7 @@
 				EDB552E62E2259370001B905 /* MainView.swift in Sources */,
 				ED8667542E2A776700D2CFFE /* SignUpView.swift in Sources */,
 				ED86674A2E2A714900D2CFFE /* AuthSymbols.swift in Sources */,
+				ED8667582E2A905E00D2CFFE /* EventServiceProtocol.swift in Sources */,
 				ED86674C2E2A71B300D2CFFE /* SecureToggleField.swift in Sources */,
 				ED5170E52E26DB3B00E697CD /* SessionManager.swift in Sources */,
 				ED5170EF2E26F10400E697CD /* EventListView.swift in Sources */,
@@ -652,6 +671,7 @@
 				EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */,
 				ED5170F32E26F1B700E697CD /* SignInView3.swift in Sources */,
 				ED86673C2E280DFB00D2CFFE /* DependencyContainer.swift in Sources */,
+				ED86675D2E2A920800D2CFFE /* EventErrors.swift in Sources */,
 				ED5170ED2E26F07D00E697CD /* SignInViewModel.swift in Sources */,
 				ED45DE382E256F2500ED55E6 /* AuthErrors.swift in Sources */,
 				ED5170F12E26F11F00E697CD /* EventListViewModel.swift in Sources */,
