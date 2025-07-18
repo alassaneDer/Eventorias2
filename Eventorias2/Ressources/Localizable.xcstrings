@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "accessibility_app_description" : {
+      "comment" : "Accessibility label for Eventorias logo"
+    },
     "Adresse email" : {
 
     },
@@ -19,17 +22,72 @@
     "Appuyez pour créer un compte" : {
 
     },
-    "Appuyez pour créer un nouveau compte" : {
-
-    },
     "Appuyez pour vous connecter" : {
 
     },
-    "Appuyez pour vous connecter à un compte existant" : {
+    "auth_button_already_have_account" : {
 
     },
+    "auth_button_forgot_password" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forgot password ?"
+          }
+        }
+      }
+    },
+    "auth_button_no_account" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No account ?"
+          }
+        }
+      }
+    },
+    "auth_button_resset_password" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resset"
+          }
+        }
+      }
+    },
+    "auth_button_signIn" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in"
+          }
+        }
+      }
+    },
+    "auth_button_signUp" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up"
+          }
+        }
+      }
+    },
     "auth_error_email_in_use" : {
-      "comment" : "Email already in use"
+      "comment" : "Email already in use",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This email is already in use."
+          }
+        }
+      }
     },
     "auth_error_firestore_write_failed" : {
       "comment" : "Failed to write to data base"
@@ -38,7 +96,15 @@
       "comment" : "Invalid email or password"
     },
     "auth_error_invalid_email" : {
-      "comment" : "The email adress is invalid"
+      "comment" : "The email adress is invalid",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No account found with this email."
+          }
+        }
+      }
     },
     "auth_error_invalid_form" : {
       "comment" : "Invalid form input"
@@ -67,14 +133,71 @@
     "auth_error_weak_password" : {
       "comment" : "The password is too weak"
     },
-    "Bienvenue sur Eventorias" : {
+    "auth_placeholder_confirmPassword" : {
 
+    },
+    "auth_placeholder_email" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        }
+      }
+    },
+    "auth_placeholder_name" : {
+
+    },
+    "auth_placeholder_password" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        }
+      }
     },
     "Bouton d'inscription" : {
 
     },
     "Bouton de connexion" : {
 
+    },
+    "button_signIn_with_email_action" : {
+      "comment" : "signIn with email action"
+    },
+    "button_signIn_with_email_description" : {
+      "comment" : "signIn with email description"
+    },
+    "button_signIn_with_email_title" : {
+      "comment" : "Sign in with email button title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in with Email"
+          }
+        }
+      }
+    },
+    "button_signUp_with_email_action" : {
+      "comment" : "sign up with email action"
+    },
+    "button_signUp_with_email_description" : {
+      "comment" : "sign Up with email description"
+    },
+    "button_signUp_with_email_title" : {
+      "comment" : "Sign up with email button title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up with Email"
+          }
+        }
+      }
     },
     "Changer la photo de profil" : {
 
@@ -100,12 +223,6 @@
     "Déjà un compte ? Connectez-vous" : {
 
     },
-    "Description de l'application" : {
-
-    },
-    "Écran d'accueil d'Eventorias" : {
-
-    },
     "Email" : {
 
     },
@@ -118,8 +235,8 @@
     "Événements" : {
 
     },
-    "Eventorias" : {
-
+    "image_logo_accessibility" : {
+      "comment" : "Accessibility label for Eventorias logo"
     },
     "Inscription" : {
 
@@ -130,19 +247,31 @@
     "Mot de passe" : {
 
     },
+    "name" : {
+
+    },
     "Nom d'utilisateur" : {
 
     },
     "Nom d'utilisateur (optionnel)" : {
 
     },
-    "Organisez et découvrez des événements incroyables !" : {
+    "Pas de compte ?" : {
 
     },
     "Pas de compte ? Inscrivez-vous" : {
 
     },
+    "password" : {
+
+    },
     "S'inscrire" : {
+
+    },
+    "S'inscrire maintenant" : {
+
+    },
+    "se connecter" : {
 
     },
     "Se connecter" : {
@@ -151,8 +280,22 @@
     "Se déconnecter" : {
 
     },
+    "Select Profile Picture" : {
+
+    },
     "Sélecteur de photo de profil" : {
 
+    },
+    "subtitle_app_description" : {
+      "comment" : "Organize and discover amazing events!",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Organize and discover amazing events!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

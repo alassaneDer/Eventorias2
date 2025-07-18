@@ -20,9 +20,9 @@ struct RouteView: View {
     var body: some View {
         switch route {
         case .signUp:
-            SignUpView(viewModel: dependencyContainer.makeSignUpViewModel())
+            SignUpView(signUpViewModel: dependencyContainer.makeSignUpViewModel())
         case .signIn:
-            SignInView(viewModel: dependencyContainer.makeSignInViewModel())
+            SignInView(signInViewmodel: dependencyContainer.makeSignInViewModel())
         case .eventList:
             EventListView(viewModel: dependencyContainer.makeEventListViewModel())
         case .main:

@@ -13,6 +13,8 @@ class SignUpViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
+    @Published var isSecured: Bool = true
+    @Published var isConfirmSecured: Bool = true
     @Published var profilePictureData: Data?
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false

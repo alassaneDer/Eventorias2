@@ -33,36 +33,3 @@ struct EventoriasApp: App {
         }
     }
 }
-
-
-/*
-import SwiftUI
-import FirebaseCore
-
-@main
-struct Eventorias2App: App {
-    @StateObject private var sessionManager = SessionManager()
-    @StateObject private var coordinator: NavigationCoordinator
-    
-    init() {
-        let sessionManager = SessionManager()
-        _sessionManager = StateObject(wrappedValue: sessionManager)
-        _coordinator = StateObject(wrappedValue: NavigationCoordinator(sessionManager: sessionManager))
-    }
-    
-    var body: some Scene {
-        WindowGroup {
-            NavigationStack(path: $coordinator.path) {
-                RouteView(route: coordinator.initialRoute(), sessionManager: sessionManager)
-                    .navigationDestination(for: Route.self) { route in
-                        RouteView(route: route, sessionManager: sessionManager)
-                    }
-            }
-            .environmentObject(coordinator)
-            .environmentObject(sessionManager)
-        }
-    }
-}
-
-///     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-*/

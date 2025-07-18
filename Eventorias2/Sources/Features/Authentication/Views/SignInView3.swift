@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct SignInView: View {
+struct SignInView3: View {
     @StateObject private var viewModel: SignInViewModel
     @EnvironmentObject private var coordinator: NavigationCoordinator
     @EnvironmentObject private var sessionManager: SessionManager
@@ -70,7 +70,7 @@ struct SignInView: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         let dependencyContainer = DependencyContainer()
-        SignInView(viewModel: dependencyContainer.makeSignInViewModel())
+        SignInView3(viewModel: dependencyContainer.makeSignInViewModel())
             .environmentObject(dependencyContainer.sessionManager)
             .environmentObject(dependencyContainer.makeNavigationCoordinator())
     }

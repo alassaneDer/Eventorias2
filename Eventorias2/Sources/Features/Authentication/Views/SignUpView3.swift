@@ -7,7 +7,7 @@
 import SwiftUI
 import PhotosUI
 
-struct SignUpView: View {
+struct SignUpView3: View {
     @StateObject private var viewModel: SignUpViewModel
     @EnvironmentObject private var coordinator: NavigationCoordinator
     @EnvironmentObject private var sessionManager: SessionManager
@@ -107,7 +107,7 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         let dependencyContainer = DependencyContainer()
-        SignUpView(viewModel: dependencyContainer.makeSignUpViewModel())
+        SignUpView3(viewModel: dependencyContainer.makeSignUpViewModel())
             .environmentObject(dependencyContainer.sessionManager)
             .environmentObject(dependencyContainer.makeNavigationCoordinator())
     }
