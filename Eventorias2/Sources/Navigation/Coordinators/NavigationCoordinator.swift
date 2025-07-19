@@ -5,7 +5,7 @@
 //  Created by Alassane Der on 15/07/2025.
 //
 import Foundation
-
+/// reenommer ScreenManager
 @MainActor
 class NavigationCoordinator: ObservableObject {
     @Published var path: [Route] = []

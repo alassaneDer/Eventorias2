@@ -37,6 +37,13 @@
 		ED8667582E2A905E00D2CFFE /* EventServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667572E2A905E00D2CFFE /* EventServiceProtocol.swift */; };
 		ED86675A2E2A90F700D2CFFE /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667592E2A90F700D2CFFE /* EventService.swift */; };
 		ED86675D2E2A920800D2CFFE /* EventErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86675C2E2A920800D2CFFE /* EventErrors.swift */; };
+		ED86675F2E2A933400D2CFFE /* EventCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86675E2E2A933400D2CFFE /* EventCreateViewModel.swift */; };
+		ED8667642E2A95F600D2CFFE /* CreateEventTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667632E2A95F600D2CFFE /* CreateEventTextField.swift */; };
+		ED8667662E2A968000D2CFFE /* FakeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667652E2A968000D2CFFE /* FakeCreateView.swift */; };
+		ED8667682E2A96C900D2CFFE /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667672E2A96C900D2CFFE /* CustomTabBar.swift */; };
+		ED86676A2E2A9C6100D2CFFE /* IconicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667692E2A9C6100D2CFFE /* IconicButton.swift */; };
+		ED8667722E2AA04D00D2CFFE /* Eventorias2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667712E2AA04D00D2CFFE /* Eventorias2Tests.swift */; };
+		EDAC7C112E2C22A7007EB2A7 /* EventDateTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC7C102E2C22A7007EB2A7 /* EventDateTimePickerView.swift */; };
 		EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E32E2259370001B905 /* Eventorias2App.swift */; };
 		EDB552E62E2259370001B905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E52E2259370001B905 /* MainView.swift */; };
 		EDB552E82E22593A0001B905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB552E72E22593A0001B905 /* Assets.xcassets */; };
@@ -50,6 +57,16 @@
 		EDB553352E22E3BD0001B905 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553342E22E3BD0001B905 /* AuthService.swift */; };
 		EDB553372E22F7FC0001B905 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553362E22F7FC0001B905 /* UserProfileService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED8667732E2AA04D00D2CFFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB552D82E2259370001B905 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB552DF2E2259370001B905;
+			remoteInfo = Eventorias2;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		ED45DE372E256F2500ED55E6 /* AuthErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrors.swift; sourceTree = "<group>"; };
@@ -81,6 +98,14 @@
 		ED8667572E2A905E00D2CFFE /* EventServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceProtocol.swift; sourceTree = "<group>"; };
 		ED8667592E2A90F700D2CFFE /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		ED86675C2E2A920800D2CFFE /* EventErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventErrors.swift; sourceTree = "<group>"; };
+		ED86675E2E2A933400D2CFFE /* EventCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreateViewModel.swift; sourceTree = "<group>"; };
+		ED8667632E2A95F600D2CFFE /* CreateEventTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventTextField.swift; sourceTree = "<group>"; };
+		ED8667652E2A968000D2CFFE /* FakeCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCreateView.swift; sourceTree = "<group>"; };
+		ED8667672E2A96C900D2CFFE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		ED8667692E2A9C6100D2CFFE /* IconicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconicButton.swift; sourceTree = "<group>"; };
+		ED86676F2E2AA04C00D2CFFE /* Eventorias2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eventorias2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8667712E2AA04D00D2CFFE /* Eventorias2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2Tests.swift; sourceTree = "<group>"; };
+		EDAC7C102E2C22A7007EB2A7 /* EventDateTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateTimePickerView.swift; sourceTree = "<group>"; };
 		EDB552E02E2259370001B905 /* Eventorias2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB552E32E2259370001B905 /* Eventorias2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2App.swift; sourceTree = "<group>"; };
 		EDB552E52E2259370001B905 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -95,6 +120,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED86676C2E2AA04C00D2CFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDB552DD2E2259370001B905 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,10 +217,28 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		ED8667622E2A95CF00D2CFFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ED8667632E2A95F600D2CFFE /* CreateEventTextField.swift */,
+				EDAC7C102E2C22A7007EB2A7 /* EventDateTimePickerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ED8667702E2AA04C00D2CFFE /* Eventorias2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ED8667712E2AA04D00D2CFFE /* Eventorias2Tests.swift */,
+			);
+			path = Eventorias2Tests;
+			sourceTree = "<group>";
+		};
 		EDB552D72E2259370001B905 = {
 			isa = PBXGroup;
 			children = (
 				EDB552E22E2259370001B905 /* Eventorias2 */,
+				ED8667702E2AA04C00D2CFFE /* Eventorias2Tests */,
 				EDB552E12E2259370001B905 /* Products */,
 				EDB553292E229AC10001B905 /* Frameworks */,
 			);
@@ -198,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				EDB552E02E2259370001B905 /* Eventorias2.app */,
+				ED86676F2E2AA04C00D2CFFE /* Eventorias2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				EDB552F72E22814B0001B905 /* Sources */,
-				EDB552F32E227E110001B905 /* Tests */,
 				EDB552F42E227E180001B905 /* Ressources */,
 				EDB552E72E22593A0001B905 /* Assets.xcassets */,
 				EDB552E92E22593A0001B905 /* Preview Content */,
@@ -229,13 +279,6 @@
 				EDB553252E2296740001B905 /* AppDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		EDB552F32E227E110001B905 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		EDB552F42E227E180001B905 /* Ressources */ = {
@@ -406,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				ED5170F02E26F11F00E697CD /* EventListViewModel.swift */,
+				ED86675E2E2A933400D2CFFE /* EventCreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -414,6 +458,8 @@
 			isa = PBXGroup;
 			children = (
 				ED5170EE2E26F10400E697CD /* EventListView.swift */,
+				ED8667652E2A968000D2CFFE /* FakeCreateView.swift */,
+				ED8667622E2A95CF00D2CFFE /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -551,6 +597,8 @@
 		EDB553172E2284A20001B905 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED8667672E2A96C900D2CFFE /* CustomTabBar.swift */,
+				ED8667692E2A9C6100D2CFFE /* IconicButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -565,6 +613,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ED86676E2E2AA04C00D2CFFE /* Eventorias2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED8667752E2AA04D00D2CFFE /* Build configuration list for PBXNativeTarget "Eventorias2Tests" */;
+			buildPhases = (
+				ED86676B2E2AA04C00D2CFFE /* Sources */,
+				ED86676C2E2AA04C00D2CFFE /* Frameworks */,
+				ED86676D2E2AA04C00D2CFFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED8667742E2AA04D00D2CFFE /* PBXTargetDependency */,
+			);
+			name = Eventorias2Tests;
+			productName = Eventorias2Tests;
+			productReference = ED86676F2E2AA04C00D2CFFE /* Eventorias2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EDB552DF2E2259370001B905 /* Eventorias2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDB552EE2E22593A0001B905 /* Build configuration list for PBXNativeTarget "Eventorias2" */;
@@ -597,6 +663,10 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					ED86676E2E2AA04C00D2CFFE = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = EDB552DF2E2259370001B905;
+					};
 					EDB552DF2E2259370001B905 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -619,11 +689,19 @@
 			projectRoot = "";
 			targets = (
 				EDB552DF2E2259370001B905 /* Eventorias2 */,
+				ED86676E2E2AA04C00D2CFFE /* Eventorias2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ED86676D2E2AA04C00D2CFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDB552DE2E2259370001B905 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,6 +718,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ED86676B2E2AA04C00D2CFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED8667722E2AA04D00D2CFFE /* Eventorias2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDB552DC2E2259370001B905 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,17 +738,22 @@
 				ED8667562E2A8FBE00D2CFFE /* Event.swift in Sources */,
 				ED5170EB2E26EC3200E697CD /* RootView.swift in Sources */,
 				ED5170DC2E26BD8F00E697CD /* String+Validation.swift in Sources */,
+				ED8667682E2A96C900D2CFFE /* CustomTabBar.swift in Sources */,
+				ED8667642E2A95F600D2CFFE /* CreateEventTextField.swift in Sources */,
 				EDB553332E22E1B70001B905 /* UserProfileServiceProtocol.swift in Sources */,
 				EDB552E62E2259370001B905 /* MainView.swift in Sources */,
 				ED8667542E2A776700D2CFFE /* SignUpView.swift in Sources */,
+				ED8667662E2A968000D2CFFE /* FakeCreateView.swift in Sources */,
 				ED86674A2E2A714900D2CFFE /* AuthSymbols.swift in Sources */,
 				ED8667582E2A905E00D2CFFE /* EventServiceProtocol.swift in Sources */,
 				ED86674C2E2A71B300D2CFFE /* SecureToggleField.swift in Sources */,
 				ED5170E52E26DB3B00E697CD /* SessionManager.swift in Sources */,
 				ED5170EF2E26F10400E697CD /* EventListView.swift in Sources */,
+				EDAC7C112E2C22A7007EB2A7 /* EventDateTimePickerView.swift in Sources */,
 				EDB553372E22F7FC0001B905 /* UserProfileService.swift in Sources */,
 				ED5170DE2E26BDE000E697CD /* Color+Extension.swift in Sources */,
 				ED5170E02E26D43000E697CD /* SignUpView3.swift in Sources */,
+				ED86676A2E2A9C6100D2CFFE /* IconicButton.swift in Sources */,
 				ED8667482E2A70C700D2CFFE /* IconTextField.swift in Sources */,
 				EDB553312E22DF340001B905 /* AuthServiceProtocol.swift in Sources */,
 				ED8667522E2A72BB00D2CFFE /* SignInView.swift in Sources */,
@@ -675,6 +766,7 @@
 				ED5170ED2E26F07D00E697CD /* SignInViewModel.swift in Sources */,
 				ED45DE382E256F2500ED55E6 /* AuthErrors.swift in Sources */,
 				ED5170F12E26F11F00E697CD /* EventListViewModel.swift in Sources */,
+				ED86675F2E2A933400D2CFFE /* EventCreateViewModel.swift in Sources */,
 				ED5170E72E26E24D00E697CD /* NavigationCoordinator.swift in Sources */,
 				EDB553352E22E3BD0001B905 /* AuthService.swift in Sources */,
 			);
@@ -682,7 +774,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		ED8667742E2AA04D00D2CFFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB552DF2E2259370001B905 /* Eventorias2 */;
+			targetProxy = ED8667732E2AA04D00D2CFFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		ED8667762E2AA04D00D2CFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YB7MLZ84DZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alassane.der.Eventorias2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventorias2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eventorias2";
+			};
+			name = Debug;
+		};
+		ED8667772E2AA04D00D2CFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YB7MLZ84DZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alassane.der.Eventorias2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventorias2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eventorias2";
+			};
+			name = Release;
+		};
 		EDB552EC2E22593A0001B905 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -871,6 +1007,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED8667752E2AA04D00D2CFFE /* Build configuration list for PBXNativeTarget "Eventorias2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8667762E2AA04D00D2CFFE /* Debug */,
+				ED8667772E2AA04D00D2CFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EDB552DB2E2259370001B905 /* Build configuration list for PBXProject "Eventorias2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

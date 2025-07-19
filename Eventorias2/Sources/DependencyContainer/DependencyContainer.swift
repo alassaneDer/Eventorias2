@@ -12,6 +12,11 @@ class DependencyContainer: ObservableObject {
     let authService: AuthServiceProtocol
     let userProfileService: UserProfileServiceProtocol
     
+    lazy var manager: SessionManager = {
+        SessionManager()
+    }() /// pas charger si pas utiliser tout de suite, qu'en cas d'utilisation
+    ///si pas besoin au demarrage
+    
     init() {
         self.authService = AuthService()
         self.userProfileService = UserProfileService()
@@ -34,3 +39,5 @@ class DependencyContainer: ObservableObject {
         return EventListViewModel()
     }
 }
+/// attention:  initialiser que ce dont j'ai besoin au demarrage
+/// LazyVar

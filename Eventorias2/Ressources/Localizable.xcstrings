@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "accessibility_app_description" : {
       "comment" : "Accessibility label for Eventorias logo"
     },
@@ -134,7 +137,14 @@
       "comment" : "The password is too weak"
     },
     "auth_placeholder_confirmPassword" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Password"
+          }
+        }
+      }
     },
     "auth_placeholder_email" : {
       "localizations" : {
@@ -147,7 +157,14 @@
       }
     },
     "auth_placeholder_name" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
     },
     "auth_placeholder_password" : {
       "localizations" : {
@@ -217,6 +234,9 @@
     "Connexion à Eventorias" : {
 
     },
+    "Date" : {
+
+    },
     "Déconnexion" : {
 
     },
@@ -233,6 +253,60 @@
 
     },
     "Événements" : {
+
+    },
+    "event_create_title" : {
+      "comment" : "Create Event"
+    },
+    "event_creation_placeholder_adresse" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter full address"
+          }
+        }
+      }
+    },
+    "event_creation_placeholder_description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap here to enter your description"
+          }
+        }
+      }
+    },
+    "event_creation_placeholder_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New event"
+          }
+        }
+      }
+    },
+    "event_creation_title" : {
+      "comment" : "event creation title"
+    },
+    "event_error_invalid_form" : {
+      "comment" : "Invalid form input"
+    },
+    "event_error_not_found" : {
+      "comment" : "Event not found"
+    },
+    "event_error_unexpected" : {
+      "comment" : "An unexpected error occurred: (message)"
+    },
+    "event_placeholder_date" : {
+      "comment" : "Event date"
+    },
+    "event_select_image" : {
+      "comment" : "Select Event Image"
+    },
+    "Heure" : {
 
     },
     "image_logo_accessibility" : {
@@ -296,6 +370,15 @@
           }
         }
       }
+    },
+    "Time" : {
+
+    },
+    "user_notification_enable" : {
+      "comment" : "toggle button for notifications"
+    },
+    "validate_event_button_title" : {
+
     }
   },
   "version" : "1.0"
