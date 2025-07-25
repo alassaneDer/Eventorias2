@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 @MainActor
 class EventCreateViewModel: ObservableObject {
@@ -18,6 +19,9 @@ class EventCreateViewModel: ObservableObject {
     @Published var errorMessage: IdentifiableError?
     @Published var isLoading: Bool = false
     
+    @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    @Published var selectedLocation: LocationPoint = LocationPoint(coordinate: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522))
+    
     private let eventService: EventServiceProtocol
     
     init(eventService: EventServiceProtocol = EventService()) {
@@ -25,7 +29,7 @@ class EventCreateViewModel: ObservableObject {
     }
     
     func updateDate(dayPart: Date? = nil, timePart: Date? = nil) {
-        var calendar = Calendar.current
+        let calendar = Calendar.current
         var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: self.date)
         
         if let day = dayPart {
@@ -46,13 +50,20 @@ class EventCreateViewModel: ObservableObject {
         }
     }
     
+    func updateLocation(coordinate: CLLocationCoordinate2D) {
+        selectedLocation = LocationPoint(coordinate: coordinate)
+        latitude = String(coordinate.latitude)
+        longitude = String(coordinate.longitude)
+        mapRegion.center = coordinate
+    }
+    
     var isFormValid: Bool {
-        !title.isEmpty && 
-        !description.isEmpty && 
-        !latitude.isEmpty && 
-        !longitude.isEmpty &&
-        Double(latitude) != nil &&
-        Double(longitude) != nil &&
+        !title.isEmpty &&
+        !description.isEmpty &&
+        //        !latitude.isEmpty &&
+        //        !longitude.isEmpty &&
+        //        Double(latitude) != nil &&
+        //        Double(longitude) != nil &&
         date >= Date()
     }
     
@@ -82,11 +93,21 @@ class EventCreateViewModel: ObservableObject {
         latitude = ""
         longitude = ""
         imageData = nil
+        mapRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522),
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        )
+        selectedLocation = LocationPoint(coordinate: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522))
     }
     
 }
 
-struct IdentifiableError: Identifiable {
+struct IdentifiableError: Identifiable, Equatable {
     let id = UUID()
     let message: String
+}
+
+struct LocationPoint: Identifiable {
+    let id = UUID()
+    let coordinate: CLLocationCoordinate2D
 }

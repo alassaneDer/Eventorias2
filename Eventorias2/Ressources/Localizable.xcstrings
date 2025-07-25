@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "accessibility_app_description" : {
       "comment" : "Accessibility label for Eventorias logo"
     },
@@ -29,7 +32,14 @@
 
     },
     "auth_button_already_have_account" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Already have account ?"
+          }
+        }
+      }
     },
     "auth_button_forgot_password" : {
       "localizations" : {
@@ -237,26 +247,26 @@
     "Date" : {
 
     },
-    "Déconnexion" : {
-
-    },
     "Déjà un compte ? Connectez-vous" : {
 
     },
     "Email" : {
 
     },
+    "Empty_list" : {
+      "comment" : "List empty"
+    },
     "Erreur : %@" : {
 
     },
-    "Événement : %@" : {
-
+    "event_creation_latitude_field" : {
+      "comment" : "Latitude"
     },
-    "Événements" : {
-
+    "event_creation_location_field" : {
+      "comment" : "Location"
     },
-    "event_create_title" : {
-      "comment" : "Create Event"
+    "event_creation_longitude_field" : {
+      "comment" : "Longitude"
     },
     "event_creation_placeholder_adresse" : {
       "localizations" : {
@@ -278,6 +288,12 @@
         }
       }
     },
+    "event_creation_placeholder_latitude" : {
+
+    },
+    "event_creation_placeholder_longitude" : {
+
+    },
     "event_creation_placeholder_title" : {
       "localizations" : {
         "en" : {
@@ -291,6 +307,12 @@
     "event_creation_title" : {
       "comment" : "event creation title"
     },
+    "event_delete_button" : {
+      "comment" : "Delete Event"
+    },
+    "event_detail_title" : {
+      "comment" : "Event Details"
+    },
     "event_error_invalid_form" : {
       "comment" : "Invalid form input"
     },
@@ -300,14 +322,11 @@
     "event_error_unexpected" : {
       "comment" : "An unexpected error occurred: (message)"
     },
-    "event_placeholder_date" : {
-      "comment" : "Event date"
+    "event_location" : {
+      "comment" : "Location"
     },
-    "event_select_image" : {
-      "comment" : "Select Event Image"
-    },
-    "Heure" : {
-
+    "event_owner" : {
+      "comment" : "Owner: (event.ownerId)"
     },
     "image_logo_accessibility" : {
       "comment" : "Accessibility label for Eventorias logo"
@@ -339,6 +358,33 @@
     "password" : {
 
     },
+    "profile_anonymous" : {
+      "comment" : "Anonymous"
+    },
+    "profile_button_signOut" : {
+      "comment" : "Sign Out"
+    },
+    "profile_change_photo" : {
+      "comment" : "Change profile picture"
+    },
+    "profile_signout_alert_cancel" : {
+      "comment" : "Cancel"
+    },
+    "profile_signout_alert_confirm" : {
+      "comment" : "Sign Out"
+    },
+    "profile_signout_alert_message" : {
+      "comment" : "Are you sure you want to sign out?"
+    },
+    "profile_signout_alert_title" : {
+      "comment" : "Confirm Sign Out"
+    },
+    "profile_signout_button_accessibility" : {
+      "comment" : "Sign out of account"
+    },
+    "profile_title" : {
+      "comment" : "User Profile"
+    },
     "S'inscrire" : {
 
     },
@@ -351,14 +397,17 @@
     "Se connecter" : {
 
     },
-    "Se déconnecter" : {
-
+    "Search_placeholder" : {
+      "comment" : "Search placeholder "
     },
     "Select Profile Picture" : {
 
     },
     "Sélecteur de photo de profil" : {
 
+    },
+    "Sort_button" : {
+      "comment" : "Sort button"
     },
     "subtitle_app_description" : {
       "comment" : "Organize and discover amazing events!",
@@ -371,14 +420,36 @@
         }
       }
     },
+    "tab_event" : {
+      "comment" : "Event"
+    },
+    "tab_event_accessibility" : {
+      "comment" : "Go to events"
+    },
+    "tab_profile" : {
+      "comment" : "Profile"
+    },
+    "tab_profile_accessibility" : {
+      "comment" : "Go to profile"
+    },
     "Time" : {
 
     },
     "user_notification_enable" : {
-      "comment" : "toggle button for notifications"
+      "comment" : "toggle button for notifications\nEnable notifications"
+    },
+    "user_notification_toggle" : {
+      "comment" : "Toggle notifications"
     },
     "validate_event_button_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Validate"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

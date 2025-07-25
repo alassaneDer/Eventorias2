@@ -15,6 +15,7 @@ struct AuthUser: Equatable, Codable, Identifiable {
     let username: String?
     var profilePictureUrl: String
     let createdAt: Date
+    var notificationsEnabled: Bool?
     
     init(user: FirebaseAuth.User, username: String? = nil, profilePictureUrl: String = "") {
         self.id = user.uid
@@ -22,6 +23,7 @@ struct AuthUser: Equatable, Codable, Identifiable {
         self.username = username
         self.profilePictureUrl = profilePictureUrl
         self.createdAt = Date()
+        self.notificationsEnabled = false
     }
     
     enum CodingKeys: String, CodingKey {
@@ -30,6 +32,7 @@ struct AuthUser: Equatable, Codable, Identifiable {
         case username
         case profilePictureUrl = "profile_picture_url"
         case createdAt = "created_at"
+        case notificationsEnabled = "notifications_enabled"
     }
 }
 

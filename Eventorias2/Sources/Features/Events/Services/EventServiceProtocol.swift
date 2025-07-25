@@ -12,4 +12,5 @@ protocol EventServiceProtocol {
     func createEvent(_ event: Event, imageData: Data?) async throws
     func fetchEvent(id: String) async throws -> Event
     func uploadEventImage(_ data: Data, forEventId: String) async throws -> String
+    func deleteEvent(id: String) async throws
 }

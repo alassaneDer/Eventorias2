@@ -46,6 +46,7 @@ class SessionManager: ObservableObject {
     func signOut() async throws {
         try authService.signOut()
         currentUser = nil
+        print("User signed out successfully")
     }
     
     deinit {

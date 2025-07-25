@@ -12,4 +12,7 @@ enum Route: Hashable {
     case signUp
     case main
     case eventList
+    case eventDetail(String)
+    case eventCreate
+    case userProfile
 }

@@ -9,7 +9,7 @@ import Foundation
 @MainActor
 class NavigationCoordinator: ObservableObject {
     @Published var path: [Route] = []
-    
+    /// Deux : 1 pour event et un pour profil, pourquoi pas deux coordinators
     let sessionManager: SessionManager
     
     init(sessionManager: SessionManager) {

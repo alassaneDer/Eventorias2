@@ -22,3 +22,13 @@ struct Event: Identifiable, Codable {
         let longitude: Double
     }
 }
+
+
+extension Event {
+    static let sample: [Event] = [
+        Event(title: "Music Festival", description: "event have not description for now", date: Date(), ownerId: "Jonh", imageUrl: "pexels1", location: Location(latitude: 1.0, longitude: 2.0)),
+        Event(title: "Music Festival", description: "event have not description for now", date: Date(), ownerId: "Jonh", imageUrl: "pexels1", location: Location(latitude: 1.0, longitude: 2.0)),
+        Event(title: "Music Festival", description: "event have not description for now", date: Date(), ownerId: "Jonh", imageUrl: "pexels1", location: Location(latitude: 1.0, longitude: 2.0)),
+        Event(title: "Music Festival", description: "event have not description for now", date: Date(), ownerId: "Jonh", imageUrl: "pexels1", location: Location(latitude: 1.0, longitude: 2.0))
+    ]
+}
