@@ -65,6 +65,8 @@
 		EDB553332E22E1B70001B905 /* UserProfileServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553322E22E1B70001B905 /* UserProfileServiceProtocol.swift */; };
 		EDB553352E22E3BD0001B905 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553342E22E3BD0001B905 /* AuthService.swift */; };
 		EDB553372E22F7FC0001B905 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553362E22F7FC0001B905 /* UserProfileService.swift */; };
+		EDBAD20F2E35118000127C22 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD20E2E35118000127C22 /* UserServiceProtocol.swift */; };
+		EDBAD2112E3511AD00127C22 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD2102E3511AD00127C22 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		EDB553322E22E1B70001B905 /* UserProfileServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceProtocol.swift; sourceTree = "<group>"; };
 		EDB553342E22E3BD0001B905 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EDB553362E22F7FC0001B905 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		EDBAD20E2E35118000127C22 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		EDBAD2102E3511AD00127C22 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -607,6 +611,8 @@
 		EDB5530A2E2283670001B905 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EDBAD20E2E35118000127C22 /* UserServiceProtocol.swift */,
+				EDBAD2102E3511AD00127C22 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -863,8 +869,10 @@
 				EDAC7C112E2C22A7007EB2A7 /* EventDateTimePickerView.swift in Sources */,
 				EDB553372E22F7FC0001B905 /* UserProfileService.swift in Sources */,
 				ED5170DE2E26BDE000E697CD /* Color+Extension.swift in Sources */,
+				EDBAD2112E3511AD00127C22 /* UserService.swift in Sources */,
 				ED5170E02E26D43000E697CD /* SignUpView3.swift in Sources */,
 				ED44F9BF2E2D5DC1001B8363 /* SortButton.swift in Sources */,
+				EDBAD20F2E35118000127C22 /* UserServiceProtocol.swift in Sources */,
 				ED86676A2E2A9C6100D2CFFE /* IconicButton.swift in Sources */,
 				ED8667482E2A70C700D2CFFE /* IconTextField.swift in Sources */,
 				ED44F9B62E2D07CA001B8363 /* EventDetailView.swift in Sources */,

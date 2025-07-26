@@ -17,26 +17,22 @@ struct EventCreateView: View {
     @StateObject private var viewModel = EventCreateViewModel()
     @State private var selectedPhoto: PhotosPickerItem?
     
-    @State private var notificationsEnable = false  /// used for userProfile not here
-    
     var body: some View {
         ZStack {
             Color.background(env)
                 .ignoresSafeArea()
             
             VStack(alignment: .leading) {
-                Text(NSLocalizedString("event_creation_title", comment: "event creation title"))
+                Text(NSLocalizedString("event_creation_title", comment: "Event creation title"))
                     .font(.custom("Inter-Regular", size: 24))
                     .fontWeight(.bold)
                 
                 ScrollView {
                     VStack(spacing: 16) {
-                        
-                        CreateEventTextField(title: "Title", value: $viewModel.title, placeholder: "event_creation_placeholder_title")
+                        CreateEventTextField(title: NSLocalizedString("event_creation_title_field", comment: "Title"), value: $viewModel.title, placeholder: "event_creation_placeholder_title")
                             .padding(.top)
                         
-                        CreateEventTextField(title: "Description", value: $viewModel.description, placeholder: "event_creation_placeholder_description")
-                        
+                        CreateEventTextField(title: NSLocalizedString("event_creation_description_field", comment: "Description"), value: $viewModel.description, placeholder: "event_creation_placeholder_description")
                         
                         EventDateTimePickerView(bindings: EventDateBindings(viewModel: viewModel))
                         
@@ -50,83 +46,77 @@ struct EventCreateView: View {
                             }
                             .frame(height: 200)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-//                            .onTapGesture { coordinate in
-//                                viewModel.updateLocation(coordinate: coordinate)
-//                            }
                             .padding(.bottom)
+                            .accessibilityLabel(NSLocalizedString("event_location_accessibility", comment: "Event location on map"))
                             
                             CreateEventTextField(title: NSLocalizedString("event_creation_latitude_field", comment: "Latitude"), value: $viewModel.latitude, placeholder: "event_creation_placeholder_latitude")
                                 .keyboardType(.decimalPad)
                             
-                            CreateEventTextField(title: NSLocalizedString("event_creation_longitude_field", comment: "Longitude"), value: $viewModel.longitude, placeholder: "event_creation_placeholder_longitude")
+                            CreateEventTextField(title: NSLocalizedString("event_creation_longitude_field", comment: "Longitude"), value: $viewModel.longitude, placeholder:"event_creation_placeholder_longitude")
                                 .keyboardType(.decimalPad)
                         }
                         
-                        CreateEventTextField(title: "Adresse", value: $viewModel.title, placeholder: "event_creation_placeholder_adresse")  /// changer title pour mettre adresse plutard
+                        CreateEventTextField(title: NSLocalizedString("event_creation_address_field", comment: "Address"), value: $viewModel.address, placeholder: "event_creation_placeholder_address")
                         
-                        HStack(spacing: 8, content: {
-                            Toggle("", isOn: $notificationsEnable)
-                                .tint(Color(hex: "#D0021B"))
-                                .labelsHidden()
-                            
-                            Text(NSLocalizedString("user_notification_enable", comment: "toggle button for notifications"))
-                            
-                            Spacer()
-                        })
-                        
-                        
-                        /// Picture
-                        HStack {
-                            PhotosPicker(selection: $selectedPhoto, matching: .images) {
-                                Image(systemName: "camera")
-                                    .foregroundStyle(Color(hex: "#D0021B"))
-                                    .fontWeight(.bold)
-                                    .padding()
-                                    .frame(width: 52)
-                                    .background(.white)
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .scaleEffect(1.0)
-                                    .animation(.spring(response: 0.3, dampingFraction: 0.7), value: UUID())
-                                
-                            }
-                            .onChange(of: selectedPhoto) { newItem, _ in
-                                Task {
-                                    if let data = try? await newItem?.loadTransferable(type: Data.self) {
+                        PhotosPicker(selection: $selectedPhoto, matching: .images) {
+                            Image(systemName: "paperclip")
+                                .foregroundStyle(Color.primary)
+                                .fontWeight(.bold)
+                                .padding()
+                                .frame(width: 52)
+                                .background(Color(hex: "#D0021B"))
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .scaleEffect(1.0)
+                                .animation(.spring(response: 0.3, dampingFraction: 0.7), value: UUID())
+                        }
+                        .onChange(of: selectedPhoto) { oldItem, newItem in
+                            Task {
+                                do {
+                                    if let data = try await newItem?.loadTransferable(type: Data.self) {
+                                        print("Image selected, data size: \(data.count) bytes")
                                         viewModel.imageData = data
+                                    } else {
+                                        print("No image data loaded")
+                                        viewModel.errorMessage = IdentifiableError(message: NSLocalizedString("event_image_load_error", comment: "Failed to load image"))
                                     }
+                                } catch {
+                                    print("Error loading image: \(error.localizedDescription)")
+                                    viewModel.errorMessage = IdentifiableError(message: error.localizedDescription)
                                 }
                             }
-                            
-                            IconicButton(imageSystemName: "paperclip")
-                            /// add action here
-                            ///
                         }
+                        .accessibilityLabel(NSLocalizedString("event_select_image_accessibility", comment: "Select event image"))
                         
                         if let data = viewModel.imageData, let image = UIImage(data: data) {
                             Image(uiImage: image)
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 100, height: 100)
-                                .clipShape(Circle())
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.bottom)
+                                .accessibilityLabel(NSLocalizedString("event_image_preview_accessibility", comment: "Preview of selected event image"))
                         }
                         
-                        ///
                         Button(action: {
                             Task {
-                                await viewModel.createEvent(ownerId: sessionManager.currentUser?.id ?? "")
+                                guard let ownerId = sessionManager.currentUser?.id else {
+                                    viewModel.errorMessage = IdentifiableError(message: NSLocalizedString("event_error_no_user", comment: "No user logged in"))
+                                    return
+                                }
+                                await viewModel.createEvent(ownerId: ownerId)
                                 if viewModel.errorMessage == nil {
                                     router.push(.eventList)
                                 }
                             }
                         }, label: {
-                            Text("validate_event_button_title")
+                            Text(NSLocalizedString("validate_event_button_title", comment: "Validate"))
                                 .font(.custom("Inter-Regular", size: 20))
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.white)
                                 .padding()
                                 .frame(maxWidth: .infinity)
                                 .background(
-                                    RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
+                                    RoundedRectangle(cornerRadius: 10)
                                         .fill(Color(hex: "#D0021B"))
                                 )
                         })
@@ -136,35 +126,9 @@ struct EventCreateView: View {
                                 ProgressView()
                             }
                         }
+                        .accessibilityLabel(NSLocalizedString("validate_event_button_accessibility", comment: "Validate and create event"))
                     }
                 }
-//                .overlay(alignment: .bottom) {
-//                    Button(action: {
-//                        Task {
-//                            await viewModel.createEvent(ownerId: sessionManager.currentUser?.id ?? "")
-//                            if viewModel.errorMessage == nil {
-//                                router.push(.eventList)
-//                            }
-//                        }
-//                    }, label: {
-//                        Text("validate_event_button_title")
-//                            .font(.custom("Inter-Regular", size: 20))
-//                            .fontWeight(.semibold)
-//                            .foregroundStyle(.white)
-//                            .padding()
-//                            .frame(maxWidth: .infinity)
-//                            .background(
-//                                RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-//                                    .fill(Color(hex: "#D0021B"))
-//                            )
-//                    })
-//                    .disabled(viewModel.isLoading || !viewModel.isFormValid)
-//                    .overlay {
-//                        if viewModel.isLoading {
-//                            ProgressView()
-//                        }
-//                    }
-//                }
             }
             .padding(.horizontal)
             
@@ -177,17 +141,18 @@ struct EventCreateView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .padding(.horizontal)
                     .transition(.opacity.combined(with: .move(edge: .top)))
-                //                    .animation(.easeInOut(duration: 0.3), value: errorMessage)
+                    .animation(.easeInOut(duration: 0.3), value: errorMessage)
             }
         }
+        .navigationTitle(NSLocalizedString("event_creation_title", comment: "Create Event"))
     }
 }
 
-struct FakeCreateView_Previews: PreviewProvider {
+struct EventCreateView_Previews: PreviewProvider {
     static var previews: some View {
         let dependencyContainer = DependencyContainer()
         EventCreateView()
             .environmentObject(dependencyContainer.sessionManager)
-            .environmentObject(dependencyContainer.makeNavigationCoordinator())
+            .environmentObject(NavigationCoordinator(sessionManager: dependencyContainer.sessionManager))
     }
 }

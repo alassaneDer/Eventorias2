@@ -47,9 +47,6 @@ struct CustomTabBar: View {
         }
         .frame(maxWidth: .infinity)
         .background(Color.background_field(env))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding(.horizontal)
-//        .padding(.bottom, 8)
     }
 }
 

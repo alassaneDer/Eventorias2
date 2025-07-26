@@ -30,7 +30,7 @@ struct UserProfileView: View {
                 ScrollView {
                     if let user = viewModel.user {
                         PhotosPicker(selection: $selectedPhoto, matching: .images) {
-                            AsyncImage(url: URL(string: user.profilePictureUrl ?? "")) { image in
+                            AsyncImage(url: URL(string: user.profilePictureUrl )) { image in
                                 image
                                     .resizable()
                                     .scaledToFill()
@@ -135,6 +135,16 @@ struct UserProfileView: View {
         } message: {
             Text(NSLocalizedString("profile_signout_alert_message", comment: "Are you sure you want to sign out?"))
         }
+//        .onAppear {
+//            Task {
+//                do {
+//                    try await sessionManager.signOut()
+//                    coordinator.popToRoot()
+//                } catch {
+//                    viewModel.errorMessage = IdentifiableError(message: error.localizedDescription)
+//                }
+//            }
+//        }
     }
 }
 

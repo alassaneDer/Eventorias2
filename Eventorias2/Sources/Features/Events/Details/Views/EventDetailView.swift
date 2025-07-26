@@ -50,7 +50,7 @@ struct EventDetailView: View {
                             .font(.custom("Inter-Medium", size: 18))
                             .foregroundStyle(Color.primary)
                         
-                        Text(event.description)
+                        Text(event.description ?? "")
                             .font(.custom("Inter-Regular", size: 16))
                             .foregroundStyle(Color.gray)
                         

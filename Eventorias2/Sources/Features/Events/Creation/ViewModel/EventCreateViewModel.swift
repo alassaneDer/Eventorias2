@@ -4,7 +4,6 @@
 //
 //  Created by Alassane Der on 18/07/2025.
 //
-
 import Foundation
 import MapKit
 
@@ -12,6 +11,7 @@ import MapKit
 class EventCreateViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var description: String = ""
+    @Published var address: String = ""
     @Published var date: Date = Date()
     @Published var latitude: String = ""
     @Published var longitude: String = ""
@@ -52,24 +52,31 @@ class EventCreateViewModel: ObservableObject {
     
     func updateLocation(coordinate: CLLocationCoordinate2D) {
         selectedLocation = LocationPoint(coordinate: coordinate)
-        latitude = String(coordinate.latitude)
-        longitude = String(coordinate.longitude)
+        latitude = String(format: "%.6f", coordinate.latitude)
+        longitude = String(format: "%.6f", coordinate.longitude)
         mapRegion.center = coordinate
+        print("Location updated: latitude=\(latitude), longitude=\(longitude)")
     }
     
     var isFormValid: Bool {
-        !title.isEmpty &&
-        !description.isEmpty &&
-        //        !latitude.isEmpty &&
-        //        !longitude.isEmpty &&
-        //        Double(latitude) != nil &&
-        //        Double(longitude) != nil &&
-        date >= Date()
+        guard let lat = Double(latitude), let lon = Double(longitude) else {
+            return false
+        }
+        return !title.isEmpty &&
+               !description.isEmpty &&
+               !latitude.isEmpty &&
+               !longitude.isEmpty &&
+               lat >= -90 && lat <= 90 &&
+               lon >= -180 &&
+               lon <= 180 &&
+               date >= Date()
     }
     
     func createEvent(ownerId: String) async {
+        print("Creating event: title=\(title), ownerId=\(ownerId), imageData=\(imageData?.count ?? 0) bytes)")
         guard isFormValid else {
             errorMessage = IdentifiableError(message: NSLocalizedString("event_error_invalid_form", comment: "Invalid form input"))
+            print("Form validation failed")
             return
         }
         
@@ -78,10 +85,12 @@ class EventCreateViewModel: ObservableObject {
         
         do {
             let location = Event.Location(latitude: Double(latitude) ?? 0.0, longitude: Double(longitude) ?? 0.0)
-            let event = Event(id: nil, title: title, description: description, date: date, ownerId: ownerId, imageUrl: nil, location: location)
+            let event = Event(id: nil, title: title, description: description, address: address, date: date, ownerId: ownerId, imageUrl: nil, location: location)
             try await eventService.createEvent(event, imageData: imageData)
+            print("Event created successfully")
             clearForm()
         } catch {
+            print("Error creating event: \(error.localizedDescription)")
             errorMessage = IdentifiableError(message: error.localizedDescription)
         }
     }
@@ -89,6 +98,7 @@ class EventCreateViewModel: ObservableObject {
     private func clearForm() {
         title = ""
         description = ""
+        address = ""
         date = Date()
         latitude = ""
         longitude = ""
@@ -98,8 +108,8 @@ class EventCreateViewModel: ObservableObject {
             span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         )
         selectedLocation = LocationPoint(coordinate: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522))
+        print("Form cleared")
     }
-    
 }
 
 struct IdentifiableError: Identifiable, Equatable {

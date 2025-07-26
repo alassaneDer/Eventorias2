@@ -4,12 +4,12 @@
 //
 //  Created by Alassane Der on 15/07/2025.
 //
-
 import Foundation
+import Combine
 
-@MainActor
 class EventListViewModel: ObservableObject {
     @Published var events: [Event] = []
+    @Published var users: [String: AuthUser] = [:]
     @Published var errorMessage: IdentifiableError?
     @Published var searchable: String = ""
     @Published var sortBy: sortOption = .dateAscending
@@ -21,9 +21,11 @@ class EventListViewModel: ObservableObject {
     }
     
     private let eventService: EventServiceProtocol
+    private let userService: UserServiceProtocol
     
-    init(eventService: EventServiceProtocol = EventService()) {
+    init(eventService: EventServiceProtocol = EventService(), userService: UserServiceProtocol = UserService()) {
         self.eventService = eventService
+        self.userService = userService
     }
     
     var filteredEvents: [Event] {
@@ -33,7 +35,7 @@ class EventListViewModel: ObservableObject {
             let searchLowercased = searchable.lowercased()
             result = result.filter {
                 $0.title.lowercased().contains(searchLowercased) ||
-                $0.description.lowercased().contains(searchLowercased) ||
+                ($0.description?.lowercased().contains(searchLowercased) ?? false) ||
                 "\($0.location.latitude), \($0.location.longitude)".contains(searchLowercased)
             }
         }
@@ -59,14 +61,16 @@ class EventListViewModel: ObservableObject {
         }
     }
     
-    
+    @MainActor
     func fetchEvents() async {
         do {
             let fetchedEvents = try await eventService.fetchEvents()
             self.events = fetchedEvents
             print("Events fetched: \(fetchedEvents.map { ($0.title, $0.imageUrl ?? "nil") })")
+            let userIds = Set(events.map { $0.ownerId })
+            self.users = try await userService.fetchUsers(forIds: Array(userIds))
         } catch {
-            print("Error fetching events: \(error.localizedDescription)")
+            print("Error fetching data: \(error.localizedDescription)")
             errorMessage = IdentifiableError(message: error.localizedDescription)
         }
     }

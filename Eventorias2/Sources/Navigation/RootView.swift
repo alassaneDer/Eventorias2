@@ -26,7 +26,7 @@ struct RouteView: View {
                 .environmentObject(dependencyContainer.sessionManager)
 //                .environmentObject(dependencyContainer.makeNavigationCoordinator())
         case .eventList:
-            EventListView()
+            EventListView(viewModel: dependencyContainer.makeEventListViewModel())
                 .environmentObject(dependencyContainer.sessionManager)
 //                .environmentObject(dependencyContainer.makeNavigationCoordinator())
         case .eventCreate:

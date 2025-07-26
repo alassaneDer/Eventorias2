@@ -103,10 +103,26 @@
       }
     },
     "auth_error_firestore_write_failed" : {
-      "comment" : "Failed to write to data base"
+      "comment" : "Failed to write to data base",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to write to data base"
+          }
+        }
+      }
     },
     "auth_error_invalid_credentials" : {
-      "comment" : "Invalid email or password"
+      "comment" : "Invalid email or password",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid email or password"
+          }
+        }
+      }
     },
     "auth_error_invalid_email" : {
       "comment" : "The email adress is invalid",
@@ -120,16 +136,48 @@
       }
     },
     "auth_error_invalid_form" : {
-      "comment" : "Invalid form input"
+      "comment" : "Invalid form input",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid form input"
+          }
+        }
+      }
     },
     "auth_error_invalid_image_data" : {
-      "comment" : "Invalid image data"
+      "comment" : "Invalid image data",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid image data"
+          }
+        }
+      }
     },
     "auth_error_invalid_userId" : {
-      "comment" : "Invalid user ID"
+      "comment" : "Invalid user ID",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid user ID"
+          }
+        }
+      }
     },
     "auth_error_network" : {
-      "comment" : "Network error, please try againt."
+      "comment" : "Network error, please try againt.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Network error, please try againt."
+          }
+        }
+      }
     },
     "auth_error_sign_out" : {
       "comment" : "Log out error : (error.localizedDescription)"
@@ -141,10 +189,26 @@
       "comment" : "An unexpected error occured : (error.localizedDescription)"
     },
     "auth_error_user_not_found" : {
-      "comment" : "User not found\n   User profile not found"
+      "comment" : "User not found\n   User profile not found",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User not found"
+          }
+        }
+      }
     },
     "auth_error_weak_password" : {
-      "comment" : "The password is too weak"
+      "comment" : "The password is too weak",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The password is too weak"
+          }
+        }
+      }
     },
     "auth_placeholder_confirmPassword" : {
       "localizations" : {
@@ -204,7 +268,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sign in with Email"
+            "value" : "Sign in"
           }
         }
       }
@@ -221,7 +285,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sign up with Email"
+            "value" : "Sign up"
           }
         }
       }
@@ -244,6 +308,9 @@
     "Connexion à Eventorias" : {
 
     },
+    "create_event_button" : {
+      "comment" : "Create new event"
+    },
     "Date" : {
 
     },
@@ -259,16 +326,73 @@
     "Erreur : %@" : {
 
     },
+    "event_creation_address_field" : {
+      "comment" : "Address",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse"
+          }
+        }
+      }
+    },
+    "event_creation_description_field" : {
+      "comment" : "Description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        }
+      }
+    },
     "event_creation_latitude_field" : {
-      "comment" : "Latitude"
+      "comment" : "Latitude",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latitude"
+          }
+        }
+      }
     },
     "event_creation_location_field" : {
-      "comment" : "Location"
+      "comment" : "Location",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
+        }
+      }
     },
     "event_creation_longitude_field" : {
-      "comment" : "Longitude"
+      "comment" : "Longitude",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Longitude"
+          }
+        }
+      }
+    },
+    "event_creation_placeholder_address" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter full Adresse"
+          }
+        }
+      }
     },
     "event_creation_placeholder_adresse" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -305,7 +429,26 @@
       }
     },
     "event_creation_title" : {
-      "comment" : "event creation title"
+      "comment" : "Create Event\n   Event creation title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creation of an event"
+          }
+        }
+      }
+    },
+    "event_creation_title_field" : {
+      "comment" : "Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Title"
+          }
+        }
+      }
     },
     "event_delete_button" : {
       "comment" : "Delete Event"
@@ -313,8 +456,20 @@
     "event_detail_title" : {
       "comment" : "Event Details"
     },
+    "event_error_create_failed" : {
+      "comment" : "Failed to create event: (error.localizedDescription)"
+    },
+    "event_error_delete_failed" : {
+      "comment" : "Failed to delete event: (error.localizedDescription)"
+    },
+    "event_error_fetch_failed" : {
+      "comment" : "Failed to fetch events: (error.localizedDescription)"
+    },
     "event_error_invalid_form" : {
       "comment" : "Invalid form input"
+    },
+    "event_error_no_user" : {
+      "comment" : "No user logged in"
     },
     "event_error_not_found" : {
       "comment" : "Event not found"
@@ -322,11 +477,32 @@
     "event_error_unexpected" : {
       "comment" : "An unexpected error occurred: (message)"
     },
+    "event_error_upload_image_failed" : {
+      "comment" : "Failed to upload image: (error.localizedDescription)"
+    },
+    "event_image" : {
+      "comment" : "Event image"
+    },
+    "event_image_failed" : {
+      "comment" : "Failed to load event image"
+    },
+    "event_image_load_error" : {
+      "comment" : "Failed to load image"
+    },
+    "event_image_preview_accessibility" : {
+      "comment" : "Preview of selected event image"
+    },
     "event_location" : {
       "comment" : "Location"
     },
+    "event_location_accessibility" : {
+      "comment" : "Event location on map"
+    },
     "event_owner" : {
       "comment" : "Owner: (event.ownerId)"
+    },
+    "event_select_image_accessibility" : {
+      "comment" : "Select event image"
     },
     "image_logo_accessibility" : {
       "comment" : "Accessibility label for Eventorias logo"
@@ -336,6 +512,12 @@
     },
     "Inscription à Eventorias" : {
 
+    },
+    "loading_event_image" : {
+      "comment" : "Default event image"
+    },
+    "loading_owner_image" : {
+      "comment" : "Default owner profile picture"
     },
     "Mot de passe" : {
 
@@ -348,6 +530,12 @@
     },
     "Nom d'utilisateur (optionnel)" : {
 
+    },
+    "owner_image_failed" : {
+      "comment" : "Failed to load owner profile picture"
+    },
+    "owner_profile_image" : {
+      "comment" : "Owner profile picture"
     },
     "Pas de compte ?" : {
 
@@ -362,28 +550,84 @@
       "comment" : "Anonymous"
     },
     "profile_button_signOut" : {
-      "comment" : "Sign Out"
+      "comment" : "Sign Out",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Out"
+          }
+        }
+      }
     },
     "profile_change_photo" : {
       "comment" : "Change profile picture"
     },
     "profile_signout_alert_cancel" : {
-      "comment" : "Cancel"
+      "comment" : "Cancel",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
     },
     "profile_signout_alert_confirm" : {
-      "comment" : "Sign Out"
+      "comment" : "Sign Out",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Out"
+          }
+        }
+      }
     },
     "profile_signout_alert_message" : {
-      "comment" : "Are you sure you want to sign out?"
+      "comment" : "Are you sure you want to sign out?",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to sign out?"
+          }
+        }
+      }
     },
     "profile_signout_alert_title" : {
-      "comment" : "Confirm Sign Out"
+      "comment" : "Confirm Sign Out",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Sign Out"
+          }
+        }
+      }
     },
     "profile_signout_button_accessibility" : {
-      "comment" : "Sign out of account"
+      "comment" : "Sign out of account",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign out of account"
+          }
+        }
+      }
     },
     "profile_title" : {
-      "comment" : "User Profile"
+      "comment" : "User Profile",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User profile"
+          }
+        }
+      }
     },
     "S'inscrire" : {
 
@@ -398,7 +642,15 @@
 
     },
     "Search_placeholder" : {
-      "comment" : "Search placeholder "
+      "comment" : "Search placeholder ",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
     },
     "Select Profile Picture" : {
 
@@ -407,7 +659,15 @@
 
     },
     "Sort_button" : {
-      "comment" : "Sort button"
+      "comment" : "Sort button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorting"
+          }
+        }
+      }
     },
     "subtitle_app_description" : {
       "comment" : "Organize and discover amazing events!",
@@ -421,13 +681,29 @@
       }
     },
     "tab_event" : {
-      "comment" : "Event"
+      "comment" : "Event",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Events"
+          }
+        }
+      }
     },
     "tab_event_accessibility" : {
       "comment" : "Go to events"
     },
     "tab_profile" : {
-      "comment" : "Profile"
+      "comment" : "Profile",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        }
+      }
     },
     "tab_profile_accessibility" : {
       "comment" : "Go to profile"
@@ -435,13 +711,28 @@
     "Time" : {
 
     },
+    "user_error_fetch_failed" : {
+      "comment" : "Failed to fetch users: (error.localizedDescription)"
+    },
     "user_notification_enable" : {
-      "comment" : "toggle button for notifications\nEnable notifications"
+      "comment" : "Enable notifications",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        }
+      }
     },
     "user_notification_toggle" : {
       "comment" : "Toggle notifications"
     },
+    "validate_event_button_accessibility" : {
+      "comment" : "Validate and create event"
+    },
     "validate_event_button_title" : {
+      "comment" : "Validate",
       "localizations" : {
         "en" : {
           "stringUnit" : {
