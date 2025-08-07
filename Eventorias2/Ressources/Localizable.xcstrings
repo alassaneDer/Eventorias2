@@ -7,9 +7,6 @@
     "%@" : {
 
     },
-    "accessibility_app_description" : {
-      "comment" : "Accessibility label for Eventorias logo"
-    },
     "Adresse email" : {
 
     },
@@ -61,7 +58,11 @@
         }
       }
     },
+    "auth_button_reset_password" : {
+
+    },
     "auth_button_resset_password" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -72,6 +73,7 @@
       }
     },
     "auth_button_signIn" : {
+      "comment" : "Sign In",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -82,6 +84,7 @@
       }
     },
     "auth_button_signUp" : {
+      "comment" : "Sign Up",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -250,20 +253,18 @@
         }
       }
     },
+    "back_button_accessibility" : {
+      "comment" : "Back to event list\nBack to main"
+    },
     "Bouton d'inscription" : {
 
     },
     "Bouton de connexion" : {
 
     },
-    "button_signIn_with_email_action" : {
-      "comment" : "signIn with email action"
-    },
-    "button_signIn_with_email_description" : {
-      "comment" : "signIn with email description"
-    },
     "button_signIn_with_email_title" : {
       "comment" : "Sign in with email button title",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -273,14 +274,9 @@
         }
       }
     },
-    "button_signUp_with_email_action" : {
-      "comment" : "sign up with email action"
-    },
-    "button_signUp_with_email_description" : {
-      "comment" : "sign Up with email description"
-    },
     "button_signUp_with_email_title" : {
       "comment" : "Sign up with email button title",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -289,6 +285,15 @@
           }
         }
       }
+    },
+    "calendar_day" : {
+      "comment" : "Day (dayString(from: date)) with (eventsForDate.count) events"
+    },
+    "camera_unavailable_alert_message" : {
+      "comment" : "The camera is not available on this device."
+    },
+    "camera_unavailable_alert_title" : {
+      "comment" : "Camera Unavailable"
     },
     "Changer la photo de profil" : {
 
@@ -350,6 +355,7 @@
     },
     "event_creation_latitude_field" : {
       "comment" : "Latitude",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -361,6 +367,7 @@
     },
     "event_creation_location_field" : {
       "comment" : "Location",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -372,6 +379,7 @@
     },
     "event_creation_longitude_field" : {
       "comment" : "Longitude",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -412,12 +420,6 @@
         }
       }
     },
-    "event_creation_placeholder_latitude" : {
-
-    },
-    "event_creation_placeholder_longitude" : {
-
-    },
     "event_creation_placeholder_title" : {
       "localizations" : {
         "en" : {
@@ -429,7 +431,7 @@
       }
     },
     "event_creation_title" : {
-      "comment" : "Create Event\n   Event creation title",
+      "comment" : "Create Event",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -453,8 +455,11 @@
     "event_delete_button" : {
       "comment" : "Delete Event"
     },
-    "event_detail_title" : {
-      "comment" : "Event Details"
+    "event_delete_button_accessibility" : {
+      "comment" : "Delete event"
+    },
+    "event_detail_button_accessibility" : {
+      "comment" : "View event details for (event.title)"
     },
     "event_error_create_failed" : {
       "comment" : "Failed to create event: (error.localizedDescription)"
@@ -483,6 +488,9 @@
     "event_image" : {
       "comment" : "Event image"
     },
+    "event_image_default" : {
+      "comment" : "Default event image"
+    },
     "event_image_failed" : {
       "comment" : "Failed to load event image"
     },
@@ -492,20 +500,20 @@
     "event_image_preview_accessibility" : {
       "comment" : "Preview of selected event image"
     },
-    "event_location" : {
-      "comment" : "Location"
-    },
     "event_location_accessibility" : {
       "comment" : "Event location on map"
     },
-    "event_owner" : {
-      "comment" : "Owner: (event.ownerId)"
-    },
     "event_select_image_accessibility" : {
-      "comment" : "Select event image"
+      "comment" : "Select event image from library"
     },
-    "image_logo_accessibility" : {
-      "comment" : "Accessibility label for Eventorias logo"
+    "event_take_photo_accessibility" : {
+      "comment" : "Take photo for event"
+    },
+    "events_for_date : (dateString(from: selectedDate))" : {
+      "comment" : "Events for (dateString(from: selectedDate))"
+    },
+    "geocoding_error_failed" : {
+      "comment" : "Failed to geocode address: (error.localizedDescription)"
     },
     "Inscription" : {
 
@@ -525,11 +533,23 @@
     "name" : {
 
     },
+    "next_month" : {
+      "comment" : "Next month"
+    },
+    "no_address_provided" : {
+      "comment" : "No address provided"
+    },
+    "no_events_for_date" : {
+      "comment" : "No events for (dateString(from: selectedDate))"
+    },
     "Nom d'utilisateur" : {
 
     },
     "Nom d'utilisateur (optionnel)" : {
 
+    },
+    "ok_button" : {
+      "comment" : "OK"
     },
     "owner_image_failed" : {
       "comment" : "Failed to load owner profile picture"
@@ -546,8 +566,27 @@
     "password" : {
 
     },
+    "previous_month" : {
+      "comment" : "Previous month",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous month"
+          }
+        }
+      }
+    },
     "profile_anonymous" : {
-      "comment" : "Anonymous"
+      "comment" : "Anonymous",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anonymous"
+          }
+        }
+      }
     },
     "profile_button_signOut" : {
       "comment" : "Sign Out",
@@ -561,7 +600,37 @@
       }
     },
     "profile_change_photo" : {
-      "comment" : "Change profile picture"
+      "comment" : "Change profile picture",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change profile picture"
+          }
+        }
+      }
+    },
+    "profile_email_title" : {
+      "comment" : "email",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        }
+      }
+    },
+    "profile_name_title" : {
+      "comment" : "name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
     },
     "profile_signout_alert_cancel" : {
       "comment" : "Cancel",
@@ -671,6 +740,7 @@
     },
     "subtitle_app_description" : {
       "comment" : "Organize and discover amazing events!",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

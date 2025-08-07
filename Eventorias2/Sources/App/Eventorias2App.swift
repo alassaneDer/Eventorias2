@@ -4,6 +4,8 @@
 //
 //  Created by Alassane Der on 12/07/2025.
 //
+//
+
 import SwiftUI
 import FirebaseCore
 
@@ -14,7 +16,7 @@ struct EventoriasApp: App {
     
     @MainActor
     init() {
-        FirebaseApp.configure() // Configure Firebase avant d'instancier les dépendances
+        FirebaseApp.configure()
         let dependencyContainer = DependencyContainer()
         _dependencyContainer = StateObject(wrappedValue: dependencyContainer)
         _coordinator = StateObject(wrappedValue: dependencyContainer.makeNavigationCoordinator())
@@ -22,11 +24,24 @@ struct EventoriasApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $coordinator.path) {
-                RouteView(route: coordinator.initialRoute(), dependencyContainer: dependencyContainer)
-                    .navigationDestination(for: Route.self) { route in
-                        RouteView(route: route, dependencyContainer: dependencyContainer)
+            NavigationStack {
+                Group {
+                    if coordinator.isUserAuthenticated() {
+                        NavigationStack(path: $coordinator.mainPath) {
+                            RouteView(route: .main(.eventList), dependencyContainer: dependencyContainer)
+                                .navigationDestination(for: MainRoute.self) { mainRoute in
+                                    RouteView(route: .main(mainRoute), dependencyContainer: dependencyContainer)
+                                }
+                        }
+                    } else {
+                        NavigationStack(path: $coordinator.authPath) {
+                            RouteView(route: .auth(.main), dependencyContainer: dependencyContainer)
+                                .navigationDestination(for: AuthRoute.self) { authRoute in
+                                    RouteView(route: .auth(authRoute), dependencyContainer: dependencyContainer)
+                                }
+                        }
                     }
+                }
             }
             .environmentObject(coordinator)
             .environmentObject(dependencyContainer.sessionManager)

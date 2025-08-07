@@ -14,12 +14,14 @@ class DependencyContainer: ObservableObject {
     let userProfileService: UserProfileServiceProtocol
     let eventService: EventServiceProtocol
     let userService: UserServiceProtocol
+    let geocodingService: GeocodingServiceProtocol
     
     init() {
         self.authService = AuthService()
         self.userProfileService = UserProfileService()
         self.eventService = EventService()
         self.userService = UserService()
+        self.geocodingService = GeocodingService()
         self.sessionManager = SessionManager(authService: authService, userProfileService: userProfileService)
     }
     
@@ -38,45 +40,12 @@ class DependencyContainer: ObservableObject {
     func makeEventListViewModel() -> EventListViewModel {
         return EventListViewModel(eventService: eventService, userService: userService)
     }
+    
+    func makeEventCreateViewModel() -> EventCreateViewModel {
+        return EventCreateViewModel(eventService: eventService, geocodingService: geocodingService)
+    }
+    
+    func makeEventDetailViewModel(eventId: String) -> EventDetailViewModel {
+        return EventDetailViewModel(eventId: eventId, eventService: eventService, geocodingService: geocodingService)
+    }
 }
-
-
-
-
-//import Foundation
-//
-//@MainActor
-//class DependencyContainer: ObservableObject {
-//    let sessionManager: SessionManager
-//    let authService: AuthServiceProtocol
-//    let userProfileService: UserProfileServiceProtocol
-//    
-//    lazy var manager: SessionManager = {
-//        SessionManager()
-//    }() /// pas charger si pas utiliser tout de suite, qu'en cas d'utilisation
-//    ///si pas besoin au demarrage
-//    
-//    init() {
-//        self.authService = AuthService()
-//        self.userProfileService = UserProfileService()
-//        self.sessionManager = SessionManager(authService: authService, userProfileService: userProfileService)
-//    }
-//    
-//    func makeNavigationCoordinator() -> NavigationCoordinator {
-//        return NavigationCoordinator(sessionManager: sessionManager)
-//    }
-//    
-//    func makeSignUpViewModel() -> SignUpViewModel {
-//        return SignUpViewModel(sessionManager: sessionManager)
-//    }
-//    
-//    func makeSignInViewModel() -> SignInViewModel {
-//        return SignInViewModel(sessionManager: sessionManager)
-//    }
-//    
-//    func makeEventListViewModel() -> EventListViewModel {
-//        return EventListViewModel()
-//    }
-//}
-/// attention:  initialiser que ce dont j'ai besoin au demarrage
-/// LazyVar

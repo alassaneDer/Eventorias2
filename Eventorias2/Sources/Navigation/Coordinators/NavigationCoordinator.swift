@@ -4,12 +4,14 @@
 //
 //  Created by Alassane Der on 15/07/2025.
 //
+//
 import Foundation
-/// reenommer ScreenManager
+import SwiftUI
+
 @MainActor
 class NavigationCoordinator: ObservableObject {
-    @Published var path: [Route] = []
-    /// Deux : 1 pour event et un pour profil, pourquoi pas deux coordinators
+    @Published var authPath: [AuthRoute] = []
+    @Published var mainPath: [MainRoute] = []
     let sessionManager: SessionManager
     
     init(sessionManager: SessionManager) {
@@ -17,15 +19,33 @@ class NavigationCoordinator: ObservableObject {
     }
     
     func push(_ route: Route) {
-        path.append(route)
+        switch route {
+        case .auth(let authRoute):
+            authPath.append(authRoute)
+        case .main(let mainRoute):
+            mainPath.append(mainRoute)
+        }
     }
     
-    func pop() {
-        path.removeLast()
+    func push(_ route: AuthRoute) {
+        authPath.append(route)
+    }
+    
+    func push(_ route: MainRoute) {
+        mainPath.append(route)
+    }
+    
+    func popAuth() {
+        authPath.removeLast()
+    }
+    
+    func popMain() {
+        mainPath.removeLast()
     }
     
     func popToRoot() {
-        path.removeAll()
+        authPath.removeAll()
+        mainPath.removeAll()
     }
     
     func isUserAuthenticated() -> Bool {
@@ -33,6 +53,6 @@ class NavigationCoordinator: ObservableObject {
     }
     
     func initialRoute() -> Route {
-        return isUserAuthenticated() ? .eventList : .main
+        return isUserAuthenticated() ? .main(.eventList) : .auth(.main)
     }
 }

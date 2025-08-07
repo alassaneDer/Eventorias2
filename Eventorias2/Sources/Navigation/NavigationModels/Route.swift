@@ -4,13 +4,22 @@
 //
 //  Created by Alassane Der on 15/07/2025.
 //
+//
 
 import Foundation
-/// renommer : Screens
+
 enum Route: Hashable {
+    case auth(AuthRoute)
+    case main(MainRoute)
+}
+
+enum AuthRoute: Hashable {
+    case main
     case signIn
     case signUp
-    case main
+}
+
+enum MainRoute: Hashable {
     case eventList
     case eventDetail(String)
     case eventCreate

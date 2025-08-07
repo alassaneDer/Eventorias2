@@ -4,6 +4,7 @@
 //
 //  Created by Alassane Der on 20/07/2025.
 //
+//
 import SwiftUI
 import PhotosUI
 
@@ -14,6 +15,7 @@ struct UserProfileView: View {
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var notificationsEnabled = false
     @State private var showSignOutAlert = false
+    @State private var navigateToRoute: Route?
     
     @Environment(\.self) private var env
     
@@ -23,27 +25,29 @@ struct UserProfileView: View {
                 .ignoresSafeArea()
             
             VStack(alignment: .leading, spacing: 16) {
-                Text(NSLocalizedString("profile_title", comment: "User Profile"))
-                    .font(.custom("Inter-Regular", size: 24))
-                    .fontWeight(.bold)
-                
-                ScrollView {
+                HStack {
+                    Text(NSLocalizedString("profile_title", comment: "User Profile"))
+                        .font(.custom("Inter-Regular", size: 24))
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                    
                     if let user = viewModel.user {
                         PhotosPicker(selection: $selectedPhoto, matching: .images) {
-                            AsyncImage(url: URL(string: user.profilePictureUrl )) { image in
+                            AsyncImage(url: URL(string: user.profilePictureUrl)) { image in
                                 image
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 100, height: 100)
+                                    .frame(width: 48, height: 48)
                                     .clipShape(Circle())
                             } placeholder: {
                                 Image(systemName: "person.circle.fill")
                                     .resizable()
-                                    .frame(width: 100, height: 100)
+                                    .frame(width: 48, height: 48)
                                     .foregroundStyle(Color.gray)
                             }
                         }
-                        .onChange(of: selectedPhoto) { newItem, _ in
+                        .onChange(of: selectedPhoto) { _, newItem in
                             Task {
                                 if let data = try? await newItem?.loadTransferable(type: Data.self) {
                                     await viewModel.uploadProfilePicture(data: data, forUserId: sessionManager.currentUser?.id ?? "")
@@ -52,14 +56,34 @@ struct UserProfileView: View {
                         }
                         .padding(.bottom)
                         .accessibilityLabel(NSLocalizedString("profile_change_photo", comment: "Change profile picture"))
+                    }
+                }
+                
+                ScrollView {
+                    if let user = viewModel.user {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(NSLocalizedString("profile_name_title", comment: "name"))
+                                .font(.custom("Inter-Regular", size: 14))
+                                .foregroundStyle(Color.secondary)
+                            Text(user.username ?? NSLocalizedString("profile_anonymous", comment: "Anonymous"))
+                                .font(.custom("Inter-Regular", size: 16))
+                                .foregroundStyle(Color.primary)
+                        }
+                        .padding(8)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(RoundedRectangle(cornerRadius: 4.0).fill(Color.background_field(env)))
                         
-                        Text(user.username ?? NSLocalizedString("profile_anonymous", comment: "Anonymous"))
-                            .font(.custom("Inter-Medium", size: 18))
-                            .foregroundStyle(Color.primary)
-                        
-                        Text(user.email)
-                            .font(.custom("Inter-Regular", size: 16))
-                            .foregroundStyle(Color.gray)
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(NSLocalizedString("profile_email_title", comment: "email"))
+                                .font(.custom("Inter-Regular", size: 14))
+                                .foregroundStyle(Color.secondary)
+                            Text(user.email)
+                                .font(.custom("Inter-Regular", size: 16))
+                                .foregroundStyle(Color.primary)
+                        }
+                        .padding(8)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(RoundedRectangle(cornerRadius: 4.0).fill(Color.background_field(env)))
                         
                         HStack {
                             Toggle("", isOn: $notificationsEnabled)
@@ -93,10 +117,27 @@ struct UserProfileView: View {
                         .accessibilityLabel(NSLocalizedString("profile_signout_button_accessibility", comment: "Sign out of account"))
                     }
                 }
-                
-                CustomTabBar(currentRoute: .userProfile)
             }
             .padding(.horizontal)
+            
+            VStack {
+                Spacer()
+                ZStack(alignment: .topTrailing) {
+                    CustomTabBar(currentRoute: .main(.userProfile)) { route in
+                        coordinator.push(route)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(Color.background(env))
+                    .ignoresSafeArea(edges: .bottom)
+                    
+                    IconicButton(backgroundColor: Color(hex: "#D0021B")) {
+                        navigateToRoute = .main(.eventCreate)
+                    }
+                    .padding(.trailing, 16)
+                    .offset(y: -60)
+                    .accessibilityLabel(NSLocalizedString("create_event_button", comment: "Create new event"))
+                }
+            }
             
             if let errorMessage = viewModel.errorMessage {
                 Text(errorMessage.message)
@@ -110,14 +151,24 @@ struct UserProfileView: View {
                     .animation(.easeInOut(duration: 0.3), value: errorMessage)
             }
         }
-        .navigationTitle(NSLocalizedString("profile_title", comment: "User Profile"))
         .task {
             await viewModel.fetchUser(userId: sessionManager.currentUser?.id ?? "")
             notificationsEnabled = viewModel.user?.notificationsEnabled ?? false
         }
-        .onChange(of: notificationsEnabled) { newValue, _ in
+        .onChange(of: notificationsEnabled) { _, newValue in
             Task {
                 await viewModel.updateNotificationsEnabled(newValue, forUserId: sessionManager.currentUser?.id ?? "")
+            }
+        }
+        .task(id: navigateToRoute) {
+            if let route = navigateToRoute {
+                if case .auth(.main) = route {
+                    coordinator.popToRoot()
+                    coordinator.push(.auth(.main))
+                } else {
+                    coordinator.push(route)
+                }
+                navigateToRoute = nil
             }
         }
         .alert(NSLocalizedString("profile_signout_alert_title", comment: "Confirm Sign Out"), isPresented: $showSignOutAlert) {
@@ -126,7 +177,7 @@ struct UserProfileView: View {
                 Task {
                     do {
                         try await sessionManager.signOut()
-                        coordinator.popToRoot()
+                        navigateToRoute = .auth(.main)
                     } catch {
                         viewModel.errorMessage = IdentifiableError(message: error.localizedDescription)
                     }
@@ -135,16 +186,6 @@ struct UserProfileView: View {
         } message: {
             Text(NSLocalizedString("profile_signout_alert_message", comment: "Are you sure you want to sign out?"))
         }
-//        .onAppear {
-//            Task {
-//                do {
-//                    try await sessionManager.signOut()
-//                    coordinator.popToRoot()
-//                } catch {
-//                    viewModel.errorMessage = IdentifiableError(message: error.localizedDescription)
-//                }
-//            }
-//        }
     }
 }
 

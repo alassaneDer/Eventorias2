@@ -27,7 +27,6 @@ struct SortButton: View {
             .foregroundStyle(Color.primary)
             .padding(10)
             .background(RoundedRectangle(cornerRadius: 16).fill(Color.background_field(env)))
-            .padding(.horizontal)
         })
 
     }

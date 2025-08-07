@@ -4,25 +4,23 @@
 //
 //  Created by Alassane Der on 18/07/2025.
 //
-
+//
 import SwiftUI
 
 struct SignInView: View {
-    @StateObject var signInViewmodel: SignInViewModel
-    
+    @StateObject var signInViewModel: SignInViewModel
     @EnvironmentObject private var coordinator: NavigationCoordinator
     @EnvironmentObject private var sessionManager: SessionManager
-    
     @Environment(\.self) private var env
-    
+    @State private var navigateToRoute: Route?
+
     var body: some View {
-        
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
             Color.background(env)
                 .ignoresSafeArea(.all)
             
             VStack {
-                VStack (spacing: 32) {
+                VStack(spacing: 32) {
                     Image("Logo")
                         .renderingMode(.template)
                         .imageScale(.large)
@@ -35,33 +33,29 @@ struct SignInView: View {
                 .padding(.top, 80)
                 .padding(.bottom, 50)
                 
-                /// FORM
+                IconTextField(icon: .envelope, placeholder: "auth_placeholder_email", text: $signInViewModel.email)
                 
-                IconTextField(icon: .envelope, placeholder: "auth_placeholder_email", text: $signInViewmodel.email)
-                
-                SecureToggleField(placeholder: "auth_placeholder_password", text: $signInViewmodel.password, isSecured: $signInViewmodel.isSecured)
+                SecureToggleField(placeholder: "auth_placeholder_password", text: $signInViewModel.password, isSecured: $signInViewModel.isSecured)
                 
                 HStack {
                     Spacer()
-                    
-                    BottomAuthPrompt(text: "auth_button_forgot_password", actionText: "auth_button_resset_password") {
-                        /// Navigate to resset password view
+                    BottomAuthPrompt(text: "auth_button_forgot_password", actionText: "auth_button_reset_password") {
+                        // TODO: Ajouter navigation vers la vue de réinitialisation du mot de passe si nécessaire
                     }
                 }
                 .padding()
                 
                 AuthButtonLabel(titleLabel: "auth_button_signIn") {
-                    /// call the login method in the VM
                     Task {
-                        await signInViewmodel.signIn()
-                        if signInViewmodel.errorMessage == nil {
-                            coordinator.push(.eventList)
+                        await signInViewModel.signIn()
+                        if signInViewModel.errorMessage == nil {
+                            navigateToRoute = .main(.eventList)
                         }
                     }
                 }
-                .disabled(signInViewmodel.isLoading || !signInViewmodel.isFormValid)
+                .disabled(signInViewModel.isLoading || !signInViewModel.isFormValid)
                 .overlay {
-                    if signInViewmodel.isLoading {
+                    if signInViewModel.isLoading {
                         ProgressView()
                     }
                 }
@@ -69,13 +63,12 @@ struct SignInView: View {
                 Spacer()
                 
                 BottomAuthPrompt(text: "auth_button_no_account", actionText: "auth_button_signUp") {
-                    coordinator.push(.signUp)
+                    navigateToRoute = .auth(.signUp)
                 }
-                
             }
             .padding()
             
-            if let errorMessage = signInViewmodel.errorMessage {
+            if let errorMessage = signInViewModel.errorMessage {
                 Text(errorMessage)
                     .font(.custom("Inter-Regular", size: 16))
                     .foregroundStyle(Color(hex: "#D0021B"))
@@ -83,14 +76,39 @@ struct SignInView: View {
                     .transition(.opacity.combined(with: .move(edge: .top)))
                     .animation(.easeInOut(duration: 0.3), value: errorMessage)
             }
-        })
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    navigateToRoute = .auth(.main)
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                        Text(NSLocalizedString("auth_button_signIn", comment: "Sign In"))
+                    }
+                    .foregroundStyle(.primary)
+                }
+                .accessibilityLabel(NSLocalizedString("back_button_accessibility", comment: "Back to main"))
+            }
+        }
+        .task(id: navigateToRoute) {
+            if let route = navigateToRoute {
+                if case .auth(.main) = route {
+                    coordinator.popAuth()
+                } else {
+                    coordinator.push(route)
+                }
+                navigateToRoute = nil
+            }
+        }
     }
 }
 
-struct SignInView2_Previews: PreviewProvider {
+struct SignInView1_Previews: PreviewProvider {
     static var previews: some View {
         let dependencyContainer = DependencyContainer()
-        SignInView(signInViewmodel: dependencyContainer.makeSignInViewModel())
+        SignInView(signInViewModel: dependencyContainer.makeSignInViewModel())
             .environmentObject(dependencyContainer.sessionManager)
             .environmentObject(dependencyContainer.makeNavigationCoordinator())
     }

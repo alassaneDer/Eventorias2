@@ -4,27 +4,25 @@
 //
 //  Created by Alassane Der on 18/07/2025.
 //
+
 import SwiftUI
 import PhotosUI
 
 struct SignUpView: View {
     @StateObject var signUpViewModel: SignUpViewModel
-    
     @EnvironmentObject private var coordinator: NavigationCoordinator
     @EnvironmentObject private var sessionManager: SessionManager
-    @State private var selectedPhoto: PhotosPickerItem?
-    
     @Environment(\.self) private var env
-    
+    @State private var selectedPhoto: PhotosPickerItem?
+    @State private var navigateToRoute: Route?
+
     var body: some View {
-        
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
             Color.background(env)
                 .ignoresSafeArea(.all)
             
             VStack {
-                
-                VStack (spacing: 32) {
+                VStack(spacing: 32) {
                     Image("Logo")
                         .renderingMode(.template)
                         .imageScale(.large)
@@ -37,8 +35,6 @@ struct SignUpView: View {
                 .padding(.top, 80)
                 .padding(.bottom, 50)
                 
-                /// FORM
-                
                 IconTextField(icon: .person, placeholder: "auth_placeholder_name", text: $signUpViewModel.username)
                 
                 IconTextField(icon: .envelope, placeholder: "auth_placeholder_email", text: $signUpViewModel.email)
@@ -48,7 +44,6 @@ struct SignUpView: View {
                 
                 SecureToggleField(placeholder: "auth_placeholder_confirmPassword", text: $signUpViewModel.confirmPassword, isSecured: $signUpViewModel.isConfirmSecured)
                 
-                /// photo
                 PhotosPicker(selection: $selectedPhoto, matching: .images) {
                     Text("Select Profile Picture")
                         .foregroundStyle(Color.primary)
@@ -59,7 +54,7 @@ struct SignUpView: View {
                                 .foregroundStyle(Color.background_field(env))
                         }
                 }
-                .onChange(of: selectedPhoto) { newItem, _ in
+                .onChange(of: selectedPhoto) { _, newItem in
                     Task {
                         if let data = try? await newItem?.loadTransferable(type: Data.self) {
                             signUpViewModel.profilePictureData = data
@@ -75,12 +70,11 @@ struct SignUpView: View {
                         .clipShape(Circle())
                 }
                 
-                ///
                 AuthButtonLabel(titleLabel: "auth_button_signUp") {
                     Task {
                         await signUpViewModel.signUp()
                         if signUpViewModel.errorMessage == nil {
-                            coordinator.push(.eventList)
+                            navigateToRoute = .main(.eventList)
                         }
                     }
                 }
@@ -95,7 +89,7 @@ struct SignUpView: View {
                 Spacer()
                 
                 BottomAuthPrompt(text: "auth_button_already_have_account", actionText: "auth_button_signIn") {
-                    coordinator.push(.signIn)
+                    navigateToRoute = .auth(.signIn)
                 }
             }
             .padding()
@@ -108,10 +102,34 @@ struct SignUpView: View {
                     .transition(.opacity.combined(with: .move(edge: .top)))
                     .animation(.easeInOut(duration: 0.3), value: errorMessage)
             }
-        })
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    navigateToRoute = .auth(.main)
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                        Text(NSLocalizedString("auth_button_signUp", comment: "Sign Up"))
+                    }
+                    .foregroundStyle(.primary)
+                }
+                .accessibilityLabel(NSLocalizedString("back_button_accessibility", comment: "Back to main"))
+            }
+        }
+        .task(id: navigateToRoute) {
+            if let route = navigateToRoute {
+                if case .auth(.main) = route {
+                    coordinator.popAuth()
+                } else {
+                    coordinator.push(route)
+                }
+                navigateToRoute = nil
+            }
+        }
     }
 }
-
 
 struct SignUpView2_Previews: PreviewProvider {
     static var previews: some View {
@@ -121,4 +139,3 @@ struct SignUpView2_Previews: PreviewProvider {
             .environmentObject(dependencyContainer.makeNavigationCoordinator())
     }
 }
-

@@ -6,12 +6,6 @@
 //
 
 import Foundation
-//
-//protocol UserProfileServiceProtocol {
-//    func createUser(_ user: AuthUser) async throws
-//    func fetchUser(id: String) async throws -> AuthUser
-//    func uploadProfilePicture(_ imageData: Data, forUserId: String) async throws -> String
-//}
 
 protocol UserProfileServiceProtocol {
     func fetchUser(id: String) async throws -> AuthUser

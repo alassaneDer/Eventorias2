@@ -31,6 +31,8 @@
 		ED5170F32E26F1B700E697CD /* SignInView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5170F22E26F1B700E697CD /* SignInView3.swift */; };
 		ED5921772E32968800E00D70 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5921762E32968800E00D70 /* EventDetailViewModel.swift */; };
 		ED5921792E32ABE900E00D70 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5921782E32ABE900E00D70 /* UserProfileViewModel.swift */; };
+		ED5DACCC2E3D0DA800FC0FCD /* MockStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DACCB2E3D0DA800FC0FCD /* MockStorage.swift */; };
+		ED5DACCE2E3D104200FC0FCD /* MockFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DACCD2E3D104200FC0FCD /* MockFirestore.swift */; };
 		ED86673C2E280DFB00D2CFFE /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86673B2E280DFB00D2CFFE /* DependencyContainer.swift */; };
 		ED86673E2E298D9300D2CFFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED86673D2E298D9300D2CFFE /* GoogleService-Info.plist */; };
 		ED8667412E29A28800D2CFFE /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED8667402E29A28800D2CFFE /* Inter-Regular.ttf */; };
@@ -51,7 +53,7 @@
 		ED8667662E2A968000D2CFFE /* EventCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667652E2A968000D2CFFE /* EventCreateView.swift */; };
 		ED8667682E2A96C900D2CFFE /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667672E2A96C900D2CFFE /* CustomTabBar.swift */; };
 		ED86676A2E2A9C6100D2CFFE /* IconicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667692E2A9C6100D2CFFE /* IconicButton.swift */; };
-		ED8667722E2AA04D00D2CFFE /* Eventorias2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8667712E2AA04D00D2CFFE /* Eventorias2Tests.swift */; };
+		ED8B0A9D2E452635000CC08B /* MockAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A9C2E452635000CC08B /* MockAuth.swift */; };
 		EDAC7C112E2C22A7007EB2A7 /* EventDateTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC7C102E2C22A7007EB2A7 /* EventDateTimePickerView.swift */; };
 		EDB552E42E2259370001B905 /* Eventorias2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E32E2259370001B905 /* Eventorias2App.swift */; };
 		EDB552E62E2259370001B905 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB552E52E2259370001B905 /* MainView.swift */; };
@@ -67,6 +69,10 @@
 		EDB553372E22F7FC0001B905 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB553362E22F7FC0001B905 /* UserProfileService.swift */; };
 		EDBAD20F2E35118000127C22 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD20E2E35118000127C22 /* UserServiceProtocol.swift */; };
 		EDBAD2112E3511AD00127C22 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD2102E3511AD00127C22 /* UserService.swift */; };
+		EDBAD2142E3546C400127C22 /* GeocodingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD2132E3546C400127C22 /* GeocodingServiceProtocol.swift */; };
+		EDBAD2162E3547E300127C22 /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD2152E3547E300127C22 /* GeocodingService.swift */; };
+		EDBAD2182E354A4000127C22 /* GeocodingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD2172E354A4000127C22 /* GeocodingErrors.swift */; };
+		EDBAD21A2E356C7E00127C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAD2192E356C7E00127C22 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,8 @@
 		ED5170F22E26F1B700E697CD /* SignInView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView3.swift; sourceTree = "<group>"; };
 		ED5921762E32968800E00D70 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		ED5921782E32ABE900E00D70 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		ED5DACCB2E3D0DA800FC0FCD /* MockStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorage.swift; sourceTree = "<group>"; };
+		ED5DACCD2E3D104200FC0FCD /* MockFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestore.swift; sourceTree = "<group>"; };
 		ED86673B2E280DFB00D2CFFE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		ED86673D2E298D9300D2CFFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED8667402E29A28800D2CFFE /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
@@ -124,7 +132,7 @@
 		ED8667672E2A96C900D2CFFE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		ED8667692E2A9C6100D2CFFE /* IconicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconicButton.swift; sourceTree = "<group>"; };
 		ED86676F2E2AA04C00D2CFFE /* Eventorias2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eventorias2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED8667712E2AA04D00D2CFFE /* Eventorias2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2Tests.swift; sourceTree = "<group>"; };
+		ED8B0A9C2E452635000CC08B /* MockAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuth.swift; sourceTree = "<group>"; };
 		EDAC7C102E2C22A7007EB2A7 /* EventDateTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateTimePickerView.swift; sourceTree = "<group>"; };
 		EDB552E02E2259370001B905 /* Eventorias2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB552E32E2259370001B905 /* Eventorias2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventorias2App.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 		EDB553362E22F7FC0001B905 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
 		EDBAD20E2E35118000127C22 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		EDBAD2102E3511AD00127C22 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EDBAD2132E3546C400127C22 /* GeocodingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingServiceProtocol.swift; sourceTree = "<group>"; };
+		EDBAD2152E3547E300127C22 /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
+		EDBAD2172E354A4000127C22 /* GeocodingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingErrors.swift; sourceTree = "<group>"; };
+		EDBAD2192E356C7E00127C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,9 +350,19 @@
 		ED8667702E2AA04C00D2CFFE /* Eventorias2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				ED8667712E2AA04D00D2CFFE /* Eventorias2Tests.swift */,
+				ED8B0A962E452275000CC08B /* Mock */,
 			);
 			path = Eventorias2Tests;
+			sourceTree = "<group>";
+		};
+		ED8B0A962E452275000CC08B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ED8B0A9C2E452635000CC08B /* MockAuth.swift */,
+				ED5DACCD2E3D104200FC0FCD /* MockFirestore.swift */,
+				ED5DACCB2E3D0DA800FC0FCD /* MockStorage.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		EDB552D72E2259370001B905 = {
@@ -495,6 +517,7 @@
 		EDB552FD2E22823D0001B905 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				EDBAD2122E3546B200127C22 /* Geocoding */,
 				ED86675B2E2A91F100D2CFFE /* Utilities */,
 				EDB553052E2283390001B905 /* Models */,
 				ED44F9C52E2D6AA4001B8363 /* Details */,
@@ -651,6 +674,7 @@
 		EDB5530F2E2283E70001B905 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EDBAD2192E356C7E00127C22 /* ImagePicker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -721,6 +745,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDBAD2122E3546B200127C22 /* Geocoding */ = {
+			isa = PBXGroup;
+			children = (
+				EDBAD2132E3546C400127C22 /* GeocodingServiceProtocol.swift */,
+				EDBAD2152E3547E300127C22 /* GeocodingService.swift */,
+				EDBAD2172E354A4000127C22 /* GeocodingErrors.swift */,
+			);
+			path = Geocoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -835,7 +869,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED8667722E2AA04D00D2CFFE /* Eventorias2Tests.swift in Sources */,
+				ED8B0A9D2E452635000CC08B /* MockAuth.swift in Sources */,
+				ED5DACCC2E3D0DA800FC0FCD /* MockStorage.swift in Sources */,
+				ED5DACCE2E3D104200FC0FCD /* MockFirestore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,7 +882,9 @@
 				ED86675A2E2A90F700D2CFFE /* EventService.swift in Sources */,
 				ED86674E2E2A722F00D2CFFE /* BottomAuthPrompt.swift in Sources */,
 				EDB553282E2299750001B905 /* User.swift in Sources */,
+				EDBAD21A2E356C7E00127C22 /* ImagePicker.swift in Sources */,
 				EDB553262E2296740001B905 /* AppDelegate.swift in Sources */,
+				EDBAD2142E3546C400127C22 /* GeocodingServiceProtocol.swift in Sources */,
 				ED5921772E32968800E00D70 /* EventDetailViewModel.swift in Sources */,
 				ED5170D92E26BD2600E697CD /* SignUpViewModel.swift in Sources */,
 				ED8667562E2A8FBE00D2CFFE /* Event.swift in Sources */,
@@ -859,11 +897,13 @@
 				EDB552E62E2259370001B905 /* MainView.swift in Sources */,
 				ED8667542E2A776700D2CFFE /* SignUpView.swift in Sources */,
 				ED8667662E2A968000D2CFFE /* EventCreateView.swift in Sources */,
+				EDBAD2162E3547E300127C22 /* GeocodingService.swift in Sources */,
 				ED86674A2E2A714900D2CFFE /* AuthSymbols.swift in Sources */,
 				ED5921792E32ABE900E00D70 /* UserProfileViewModel.swift in Sources */,
 				ED8667582E2A905E00D2CFFE /* EventServiceProtocol.swift in Sources */,
 				ED86674C2E2A71B300D2CFFE /* SecureToggleField.swift in Sources */,
 				ED5170E52E26DB3B00E697CD /* SessionManager.swift in Sources */,
+				EDBAD2182E354A4000127C22 /* GeocodingErrors.swift in Sources */,
 				ED5170EF2E26F10400E697CD /* EventListView.swift in Sources */,
 				ED44F9BB2E2D5997001B8363 /* ListRowView.swift in Sources */,
 				EDAC7C112E2C22A7007EB2A7 /* EventDateTimePickerView.swift in Sources */,
